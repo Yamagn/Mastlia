@@ -1,3 +1,11 @@
+//
+//  MediaAttachment.swift
+//  MastodonKit
+//
+//  Created by Ornithologist Coder on 5/9/17.
+//  Copyright © 2017 MastodonKit. All rights reserved.
+//
+
 import Foundation
 
 public enum MediaAttachment {
@@ -40,6 +48,6 @@ extension MediaAttachment {
     }
 
     var base64EncondedString: String? {
-        return data.flatMap { "data:" + mimeType + ";base64," + $0.base64EncodedString() }
+        return data.map { "data:" + mimeType + ";base64," + $0.base64EncodedString() }
     }
 }

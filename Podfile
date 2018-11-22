@@ -6,7 +6,7 @@ target 'Mastlia' do
   use_frameworks!
 
   # Pods for Mastlia
-  pod 'MastodonKit', '~>1.0'
+  pod 'MastodonKit', '2.0.0'
 
   target 'MastliaTests' do
     inherit! :search_paths

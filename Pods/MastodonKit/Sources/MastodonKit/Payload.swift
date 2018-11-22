@@ -1,3 +1,11 @@
+//
+//  Payload.swift
+//  MastodonKit
+//
+//  Created by Ornithologist Coder on 4/28/17.
+//  Copyright © 2017 MastodonKit. All rights reserved.
+//
+
 import Foundation
 
 enum Payload {
@@ -9,7 +17,7 @@ enum Payload {
 extension Payload {
     var items: [URLQueryItem]? {
         switch self {
-        case .parameters(let parameters): return parameters?.flatMap(toQueryItem)
+        case .parameters(let parameters): return parameters?.compactMap(toQueryItem)
         case .media: return nil
         case .empty: return nil
         }
@@ -17,7 +25,11 @@ extension Payload {
 
     var data: Data? {
         switch self {
-        case .parameters(let parameters): return parameters?.flatMap(toString).joined(separator: "&").data(using: .utf8)
+        case .parameters(let parameters):
+            return parameters?
+                .compactMap(toString)
+                .joined(separator: "&")
+                .data(using: .utf8)
         case .media(let mediaAttachment): return mediaAttachment.flatMap(Data.init)
         case .empty: return nil
         }
@@ -25,8 +37,10 @@ extension Payload {
 
     var type: String? {
         switch self {
-        case .parameters(let parameters): return parameters.flatMap { _ in "application/x-www-form-urlencoded; charset=utf-8" }
-        case .media(let mediaAttachment): return mediaAttachment.flatMap { _ in "multipart/form-data; boundary=MastodonKitBoundary" }
+        case .parameters(let parameters):
+            return parameters.map { _ in "application/x-www-form-urlencoded; charset=utf-8" }
+        case .media(let mediaAttachment):
+            return mediaAttachment.map { _ in "multipart/form-data; boundary=MastodonKitBoundary" }
         case .empty: return nil
         }
     }
