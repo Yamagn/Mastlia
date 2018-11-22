@@ -1,0 +1,16 @@
+PODS:
+  - MastodonKit (1.0.10)
+
+DEPENDENCIES:
+  - MastodonKit (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MastodonKit
+
+SPEC CHECKSUMS:
+  MastodonKit: 573c2b32491108599aef4d99addb0e13a154cd6a
+
+PODFILE CHECKSUM: a21467bafe091dd99da8870e40d77e2ff9bcba92
+
+COCOAPODS: 1.5.3

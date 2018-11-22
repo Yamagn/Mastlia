@@ -1,0 +1,1171 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		003F67BA2028D5FB4494986826C74467 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C218BCE3B43EF34CBFB9A3E83A825267 /* Statuses.swift */; };
+		01AEF65C1C07E7214C0ED3DAC45C6F24 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3020108B0E69C73D94EE26D0D81C8 /* Visibility.swift */; };
+		0709308E855A55A76A2F47B17687A8D1 /* Pods-MastliaTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D629188BE1CDA9A8617F9ABB4A5050C5 /* Pods-MastliaTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0898E32166F63A9C22AD0305187DECED /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C445EC6171B3EAF01AD77A97E0FCA22 /* Functions.swift */; };
+		0F3DBA92853E31F20F6ABE7A0CF4ADF3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E9D3B5080B18C82DAF3879873FF6B /* Login.swift */; };
+		110FB6E9D969B380962CE89E1F40CD9C /* AccessScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA31BDBDEB6341486C745AE5CFAB574 /* AccessScope.swift */; };
+		15D2CCAACBACCB965387767CDE42C0EF /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60307A678F90443A71FE13092E7014 /* Payload.swift */; };
+		2216E2215A4DFCD8B7B1EC32A5AE766A /* MastodonKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EE3B0E625432A27154D7AAC46F71D6 /* MastodonKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3075F9B20667F23120050ECF33B1D274 /* Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A820583A2C7DEEA26F346A676581DBE3 /* Blocks.swift */; };
+		4058115C72863FD38354CF0CA970BCEA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C827CC01CC31B1282665530764357 /* Tag.swift */; };
+		46409FC1237D5BB48A73A5521CF8388B /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73ED291DD2F4171E831EA484C5F7CA /* Attachment.swift */; };
+		4A20447401B3BCC9826774D9C2643D15 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D19AA3749C91C2604AA2D99A38C730 /* Notification.swift */; };
+		4AF82BFFAE9C2A0C3EC891B7341D2755 /* Pods-Mastlia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D68C6C7B4F2822D683E4B22545E68A /* Pods-Mastlia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D4CE34665392C2CFFE1F0EF22B7A6A0 /* Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38267103FCDEB4277E6682CF2BDEDA8F /* Clients.swift */; };
+		52934CC6A1FEAC54C6E306FB3F560ABA /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC8F083132611D9B412EDF3629FA76 /* URLComponents.swift */; };
+		664F07B82B2EE4A62CEFEBCFBFF75599 /* Timelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D4776EA87B89D4DA0725F3A52F900 /* Timelines.swift */; };
+		66E8B1E74F16D210B0369E015F56996D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93282491B95249AEFAEFAF3F4C7260 /* Card.swift */; };
+		6A880B0CFD1404A9EEDD5E1386ED9C21 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB93D3DA55D5AD128B4C14D5FC0EF2B /* HTTPMethod.swift */; };
+		733FDCA741D09CBEC979A900E31450BB /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7E228FD98E6061DDE27E6955217914 /* Status.swift */; };
+		767691D482FA5678F8E6DEB8846E0866 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D94831B063AE0FEA3A93B67A0E556E /* NotificationType.swift */; };
+		7F2BC6449FC148AD5991C310E6A94B2C /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95311935ABC270065D0BBE287FED360A /* Relationship.swift */; };
+		81E9C927E8F6644E4F3F8AAC7A7B624E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4100F5F7A21A558999D9A1B64E74E /* Account.swift */; };
+		838DD306C0DCFBD54941FA9437B66DA8 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983AADBFCF51D96BB615912D362C36FF /* RequestError.swift */; };
+		84332C4FCFBFD48EBE308FB41FD63E0C /* ClientApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D29ABA8E4443C4BE449C62D7A4CFF53 /* ClientApplication.swift */; };
+		8D299D7FA20C3002BB6B0262694C04D7 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ECEECB3D6E33C0B76E3395B0684480 /* Accounts.swift */; };
+		914B23A7CE6521E1468CADB9BD38B712 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D937716E17763491F8426755FCBF30 /* Request.swift */; };
+		91A5E427C56740E6CD827219EFF6D3C0 /* FollowRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893275625690886BB6851518F85A56D /* FollowRequests.swift */; };
+		937E779CCD84A50853437E35D43986CE /* Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008FFCD9D465DBB66E9986865B59ADC2 /* Instances.swift */; };
+		9CA68B401177E5E688D74113D51A7C7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		A135CEA7893AA4AC19FFD5F8DF3E80E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		A750F7F45BAF044CBAA2533374920046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		AF3E38C059C22284D23A780AB28DF871 /* Pods-MastliaUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE0962D97F3132DD982EAE26D29A1F7 /* Pods-MastliaUITests-dummy.m */; };
+		B3C34BB3441D29442BE6E47ABEE9F26E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CA907E13E03F982CF9EFED52FBFBE /* Notifications.swift */; };
+		B4D7FD5EC228F3A329A1599D95AA1D30 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB1A8EBB01D2D0082630A338000976 /* Media.swift */; };
+		B52CEAEE1FC8296413722A5055A0F4B5 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10C640ABE1B2E7FF0B28177769F73D /* Requests.swift */; };
+		BC22EEA07A2508E8E54F48F239F34A85 /* MediaAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0477E554CB25DED349522FE200DC86 /* MediaAttachment.swift */; };
+		BC479E3C0F08ABC6CD1CC9B447F0BCAD /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE37FDA43128E3D56A22BBFA20EB44 /* Favourites.swift */; };
+		C04D014B8677DBE6F9F51828D4F57929 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0071872A342067BB6B8A1EDBCB4F0A /* CharacterSet.swift */; };
+		C06FD3F1231031084B2618FEA08A271A /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DCEF60394613AE42DD548CC91BABD5 /* Search.swift */; };
+		C155875B6AA1B87A2C1F49EA73598F90 /* Pods-MastliaTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5066798BB4A74F15AEEDF486636DDAA /* Pods-MastliaTests-dummy.m */; };
+		C2A9CC59FE4F5E81B7A58384B5547E2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		C375340575E7737EDAAD344DA2E6FC03 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E0862AE175148FE7066A4C755F949B /* Context.swift */; };
+		C4CB8AD7FB1C2522EEE949375558EEBB /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDADA6DCCA3A44FE65B035721C7B6FAF /* Report.swift */; };
+		C56572742C1C25E7C1B72F070C23560C /* Pods-Mastlia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BCD8034A0DECA2CCDD01FE46963074 /* Pods-Mastlia-dummy.m */; };
+		C6072F59F5318CA10618EDAECB3DB3DB /* MastodonKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A61025EA16A19C13C6FF2B4FF3F0F9F9 /* MastodonKit-dummy.m */; };
+		C7006056EE720E6EE64B3909BE466846 /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35423A173121F8448963251FEB55AF68 /* Instance.swift */; };
+		CA99507682913703F4286043A606CF43 /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13EAA4EC6E426A3285A2498508AE9A8 /* Mention.swift */; };
+		D13B06C6BD23A3286D8159F9FFC59719 /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA890685A3A9B4D57A9261FFCD10C42F /* Reports.swift */; };
+		D2D35315740458CE6F8E6DB62D61866F /* AttachmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695715A3248360439138ED7C8E3B978D /* AttachmentType.swift */; };
+		D900543A34CA7BAF44BACA40E6249E54 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC83FD52057CDBDDC6FA06F7B790403 /* Data.swift */; };
+		D92B123F8C627814DA17138FBE602898 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16634888C1AD066F925B6827FC559FE0 /* Application.swift */; };
+		DFB66F82FDDDADBF483376F0EECABB3D /* LoginSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F1F37F7F113D7F0489C0878A9E213B /* LoginSettings.swift */; };
+		E542F1282DD53969B3DA4F2EF27826A0 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631674A6CF185932CB8E90119E7190A /* Parameter.swift */; };
+		E7D7E24B5F9714B6B50431556E400F3D /* RequestRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5D964B44CED080A0EA4E8DA9619F7 /* RequestRange.swift */; };
+		EB8CFFFF8811101C7C978BFAC4060B50 /* Pods-MastliaUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 044D3FE30BFCA72A2F2A5AD94889D5E9 /* Pods-MastliaUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF7172460DA07553FDA0171F387768E7 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334740CA5472AC617ECA3D8693329E8D /* Client.swift */; };
+		F18B9809C6989EB48A58420AAC47930D /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0FFDF59D6AB53CC601A66F24F5C9F7 /* Results.swift */; };
+		FBC6E031AA6BF0E46AD11011CEE5F916 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F7CA371ADCB7CE65B88FCB2608A85 /* URLRequest.swift */; };
+		FC85A098508C62043F512E61ABB1E15C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC855B74DD2490BEF95FA729CB30B2F1 /* DateFormatter.swift */; };
+		FE84CF561031E01EC7C9606A90AF40AC /* Mutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A1F9986F4CEA77A671CC09D7F364F /* Mutes.swift */; };
+		FFC10AF1B9D148D2509AE8F8818F0303 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3E12D770C451B06DAB946971A554A /* ClientError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D66826DD8F09F248E9EED3C292CA003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4C1D82F0D7AC0890016DE49829C23AB;
+			remoteInfo = "Pods-Mastlia";
+		};
+		8A649113B0C5BCAEC4FCF04B8DD6DE6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B8F1CB03BD73FA4BE1520C86484C3E4;
+			remoteInfo = MastodonKit;
+		};
+		927CBFB8B66CD07C9B46299C87A7F2E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4C1D82F0D7AC0890016DE49829C23AB;
+			remoteInfo = "Pods-Mastlia";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008FFCD9D465DBB66E9986865B59ADC2 /* Instances.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Instances.swift; path = Sources/MastodonKit/Requests/Instances.swift; sourceTree = "<group>"; };
+		044D3FE30BFCA72A2F2A5AD94889D5E9 /* Pods-MastliaUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MastliaUITests-umbrella.h"; sourceTree = "<group>"; };
+		0A93282491B95249AEFAEFAF3F4C7260 /* Card.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Sources/MastodonKit/Models/Card.swift; sourceTree = "<group>"; };
+		0C60307A678F90443A71FE13092E7014 /* Payload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Payload.swift; path = Sources/MastodonKit/Payload.swift; sourceTree = "<group>"; };
+		0DC83FD52057CDBDDC6FA06F7B790403 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Sources/MastodonKit/Foundation/Data.swift; sourceTree = "<group>"; };
+		16634888C1AD066F925B6827FC559FE0 /* Application.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Sources/MastodonKit/Models/Application.swift; sourceTree = "<group>"; };
+		192D4776EA87B89D4DA0725F3A52F900 /* Timelines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timelines.swift; path = Sources/MastodonKit/Requests/Timelines.swift; sourceTree = "<group>"; };
+		1950543E82A930D696FE3D4CBAAA0044 /* Pods-Mastlia-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mastlia-resources.sh"; sourceTree = "<group>"; };
+		19EE3B0E625432A27154D7AAC46F71D6 /* MastodonKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MastodonKit-umbrella.h"; sourceTree = "<group>"; };
+		1B6F7CA371ADCB7CE65B88FCB2608A85 /* URLRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = Sources/MastodonKit/Foundation/URLRequest.swift; sourceTree = "<group>"; };
+		1B75CD2A72695363412CD9921B66A4F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA3020108B0E69C73D94EE26D0D81C8 /* Visibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Visibility.swift; path = Sources/MastodonKit/Models/Visibility.swift; sourceTree = "<group>"; };
+		1FA31BDBDEB6341486C745AE5CFAB574 /* AccessScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessScope.swift; path = Sources/MastodonKit/Models/AccessScope.swift; sourceTree = "<group>"; };
+		1FD099CF5C5DA2C409882F09F1227492 /* Pods-MastliaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MastliaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		20FE937DA46B3AF97A94442AD8E7F123 /* Pods-MastliaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MastliaTests.release.xcconfig"; sourceTree = "<group>"; };
+		27D937716E17763491F8426755FCBF30 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Sources/MastodonKit/Request.swift; sourceTree = "<group>"; };
+		28D68C6C7B4F2822D683E4B22545E68A /* Pods-Mastlia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mastlia-umbrella.h"; sourceTree = "<group>"; };
+		2EB93D3DA55D5AD128B4C14D5FC0EF2B /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Sources/MastodonKit/HTTPMethod.swift; sourceTree = "<group>"; };
+		334740CA5472AC617ECA3D8693329E8D /* Client.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Sources/MastodonKit/Client.swift; sourceTree = "<group>"; };
+		35423A173121F8448963251FEB55AF68 /* Instance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Instance.swift; path = Sources/MastodonKit/Models/Instance.swift; sourceTree = "<group>"; };
+		38267103FCDEB4277E6682CF2BDEDA8F /* Clients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Clients.swift; path = Sources/MastodonKit/Requests/Clients.swift; sourceTree = "<group>"; };
+		39ECEECB3D6E33C0B76E3395B0684480 /* Accounts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Accounts.swift; path = Sources/MastodonKit/Requests/Accounts.swift; sourceTree = "<group>"; };
+		3A4D6CB6C9AD12115A22E867D5FE6592 /* MastodonKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MastodonKit.modulemap; sourceTree = "<group>"; };
+		41E391125A067059492AE88B244A0DD7 /* Pods-MastliaTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MastliaTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4359E634C03A5F829039E3384DD02376 /* Pods-MastliaTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MastliaTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		441371EA7E5C4D2BA320826391D0B391 /* Pods_MastliaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MastliaTests.framework; path = "Pods-MastliaTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		457B5783BD92A422EA814FC54F7A9152 /* MastodonKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MastodonKit-prefix.pch"; sourceTree = "<group>"; };
+		476A4499C76FD1D82005C798355AB75B /* MastodonKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MastodonKit.xcconfig; sourceTree = "<group>"; };
+		49518697FED7932A8E04AB15AAC1886F /* Pods-MastliaUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MastliaUITests-frameworks.sh"; sourceTree = "<group>"; };
+		4A7BAE7526FE9CED409D756631399DFF /* Pods-MastliaUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MastliaUITests.modulemap"; sourceTree = "<group>"; };
+		4E24A085D8D2F1103F36AE8DBB9E0AA6 /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MastodonKit.framework; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EF4100F5F7A21A558999D9A1B64E74E /* Account.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Sources/MastodonKit/Models/Account.swift; sourceTree = "<group>"; };
+		541D810EE7C0ABCD1C25F8F89DCBE67A /* Pods-Mastlia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mastlia.debug.xcconfig"; sourceTree = "<group>"; };
+		54B518A34E49F6BFFF440A3E3442EA64 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54D94831B063AE0FEA3A93B67A0E556E /* NotificationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationType.swift; path = Sources/MastodonKit/Models/NotificationType.swift; sourceTree = "<group>"; };
+		56E1EA84B31D22D1019D579BE6244A49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F1F37F7F113D7F0489C0878A9E213B /* LoginSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginSettings.swift; path = Sources/MastodonKit/Models/LoginSettings.swift; sourceTree = "<group>"; };
+		5A7C9FCD56FD94C6B7375930605B9143 /* Pods-Mastlia-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mastlia-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5B10C640ABE1B2E7FF0B28177769F73D /* Requests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = Sources/MastodonKit/Requests.swift; sourceTree = "<group>"; };
+		5BB31E3FD655FE5E1EBC7928CEA62798 /* Pods-MastliaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MastliaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CCB16C97FDC5D866D075DA99CD57CF7 /* Pods-MastliaUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MastliaUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5DA5D964B44CED080A0EA4E8DA9619F7 /* RequestRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestRange.swift; path = Sources/MastodonKit/RequestRange.swift; sourceTree = "<group>"; };
+		65493BF34B1822AD13BA76F17F1E5C25 /* Pods-MastliaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MastliaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		695715A3248360439138ED7C8E3B978D /* AttachmentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttachmentType.swift; path = Sources/MastodonKit/Models/AttachmentType.swift; sourceTree = "<group>"; };
+		6D29ABA8E4443C4BE449C62D7A4CFF53 /* ClientApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientApplication.swift; path = Sources/MastodonKit/Models/ClientApplication.swift; sourceTree = "<group>"; };
+		712B331E0E9EEB5CB206E31B937A93D1 /* Pods-Mastlia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mastlia.release.xcconfig"; sourceTree = "<group>"; };
+		77D19AA3749C91C2604AA2D99A38C730 /* Notification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Sources/MastodonKit/Models/Notification.swift; sourceTree = "<group>"; };
+		798BD7305E6DDEA45A0A8540211881B8 /* Pods-MastliaUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MastliaUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		798F36425CC4E4033553D09A7CA33928 /* Pods_MastliaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MastliaUITests.framework; path = "Pods-MastliaUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7E228FD98E6061DDE27E6955217914 /* Status.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Sources/MastodonKit/Models/Status.swift; sourceTree = "<group>"; };
+		7DB3E12D770C451B06DAB946971A554A /* ClientError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientError.swift; path = Sources/MastodonKit/ClientError.swift; sourceTree = "<group>"; };
+		8A0477E554CB25DED349522FE200DC86 /* MediaAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaAttachment.swift; path = Sources/MastodonKit/MediaAttachment.swift; sourceTree = "<group>"; };
+		8AC6334E5A95EB32713A15F0143161BF /* Pods-Mastlia-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mastlia-acknowledgements.plist"; sourceTree = "<group>"; };
+		8C445EC6171B3EAF01AD77A97E0FCA22 /* Functions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functions.swift; path = Sources/MastodonKit/Functions.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95311935ABC270065D0BBE287FED360A /* Relationship.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Relationship.swift; path = Sources/MastodonKit/Models/Relationship.swift; sourceTree = "<group>"; };
+		983AADBFCF51D96BB615912D362C36FF /* RequestError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestError.swift; path = Sources/MastodonKit/Models/RequestError.swift; sourceTree = "<group>"; };
+		9F2A1F9986F4CEA77A671CC09D7F364F /* Mutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mutes.swift; path = Sources/MastodonKit/Requests/Mutes.swift; sourceTree = "<group>"; };
+		A13EAA4EC6E426A3285A2498508AE9A8 /* Mention.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mention.swift; path = Sources/MastodonKit/Models/Mention.swift; sourceTree = "<group>"; };
+		A61025EA16A19C13C6FF2B4FF3F0F9F9 /* MastodonKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MastodonKit-dummy.m"; sourceTree = "<group>"; };
+		A820583A2C7DEEA26F346A676581DBE3 /* Blocks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blocks.swift; path = Sources/MastodonKit/Requests/Blocks.swift; sourceTree = "<group>"; };
+		A82B15B0E549C7AE146B74C6B71ADD96 /* Pods-MastliaTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MastliaTests-resources.sh"; sourceTree = "<group>"; };
+		B2DCEF60394613AE42DD548CC91BABD5 /* Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Sources/MastodonKit/Requests/Search.swift; sourceTree = "<group>"; };
+		B631674A6CF185932CB8E90119E7190A /* Parameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parameter.swift; path = Sources/MastodonKit/Parameter.swift; sourceTree = "<group>"; };
+		B893275625690886BB6851518F85A56D /* FollowRequests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FollowRequests.swift; path = Sources/MastodonKit/Requests/FollowRequests.swift; sourceTree = "<group>"; };
+		B90CA907E13E03F982CF9EFED52FBFBE /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Sources/MastodonKit/Requests/Notifications.swift; sourceTree = "<group>"; };
+		B97C827CC01CC31B1282665530764357 /* Tag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = Sources/MastodonKit/Models/Tag.swift; sourceTree = "<group>"; };
+		BE44692FB50E080BBB10D744F0D85790 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECE37FDA43128E3D56A22BBFA20EB44 /* Favourites.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Favourites.swift; path = Sources/MastodonKit/Requests/Favourites.swift; sourceTree = "<group>"; };
+		C218BCE3B43EF34CBFB9A3E83A825267 /* Statuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statuses.swift; path = Sources/MastodonKit/Requests/Statuses.swift; sourceTree = "<group>"; };
+		CA73ED291DD2F4171E831EA484C5F7CA /* Attachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Attachment.swift; path = Sources/MastodonKit/Models/Attachment.swift; sourceTree = "<group>"; };
+		CC6313D35076D6313D9E5A06AB0942EC /* Pods_Mastlia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mastlia.framework; path = "Pods-Mastlia.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC6664085986BB7521D782725E27249A /* Pods-Mastlia-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mastlia-frameworks.sh"; sourceTree = "<group>"; };
+		CD8E9D3B5080B18C82DAF3879873FF6B /* Login.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Sources/MastodonKit/Requests/Login.swift; sourceTree = "<group>"; };
+		CEF2EE26CF87FD0231BE57FD577260D5 /* Pods-MastliaUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MastliaUITests-resources.sh"; sourceTree = "<group>"; };
+		CF19477221132996AD57D9BCA0FB8263 /* Pods-MastliaTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MastliaTests.modulemap"; sourceTree = "<group>"; };
+		D629188BE1CDA9A8617F9ABB4A5050C5 /* Pods-MastliaTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MastliaTests-umbrella.h"; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D8BCD8034A0DECA2CCDD01FE46963074 /* Pods-Mastlia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mastlia-dummy.m"; sourceTree = "<group>"; };
+		DA890685A3A9B4D57A9261FFCD10C42F /* Reports.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reports.swift; path = Sources/MastodonKit/Requests/Reports.swift; sourceTree = "<group>"; };
+		DC855B74DD2490BEF95FA729CB30B2F1 /* DateFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Sources/MastodonKit/Foundation/DateFormatter.swift; sourceTree = "<group>"; };
+		DD0FFDF59D6AB53CC601A66F24F5C9F7 /* Results.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Results.swift; path = Sources/MastodonKit/Models/Results.swift; sourceTree = "<group>"; };
+		DDADA6DCCA3A44FE65B035721C7B6FAF /* Report.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Sources/MastodonKit/Models/Report.swift; sourceTree = "<group>"; };
+		DFE0962D97F3132DD982EAE26D29A1F7 /* Pods-MastliaUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MastliaUITests-dummy.m"; sourceTree = "<group>"; };
+		E7AC8F083132611D9B412EDF3629FA76 /* URLComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLComponents.swift; path = Sources/MastodonKit/Foundation/URLComponents.swift; sourceTree = "<group>"; };
+		E8E0862AE175148FE7066A4C755F949B /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Sources/MastodonKit/Models/Context.swift; sourceTree = "<group>"; };
+		ED3CBEC15CD070399FEA04F4FB567CA1 /* Pods-Mastlia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mastlia.modulemap"; sourceTree = "<group>"; };
+		F3CB1A8EBB01D2D0082630A338000976 /* Media.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Media.swift; path = Sources/MastodonKit/Requests/Media.swift; sourceTree = "<group>"; };
+		F5066798BB4A74F15AEEDF486636DDAA /* Pods-MastliaTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MastliaTests-dummy.m"; sourceTree = "<group>"; };
+		F84EDC3F5125B8367BD64FA4C1D6A2D7 /* Pods-MastliaTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MastliaTests-frameworks.sh"; sourceTree = "<group>"; };
+		FD0071872A342067BB6B8A1EDBCB4F0A /* CharacterSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterSet.swift; path = Sources/MastodonKit/Foundation/CharacterSet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CF83D8D3C4F0942CAC715BAA0AA3C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA68B401177E5E688D74113D51A7C7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32471CE1B4D8A64D68DD6D10FEA3EDDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A135CEA7893AA4AC19FFD5F8DF3E80E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6817A41AE920FBCBC8F3F7855BAB7E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A9CC59FE4F5E81B7A58384B5547E2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4FEE3673DCA0FBC7C4EEE44E1C72DF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A750F7F45BAF044CBAA2533374920046 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C366042747CA00FB95C0B25BCB92F43 /* Pods-Mastlia */ = {
+			isa = PBXGroup;
+			children = (
+				1B75CD2A72695363412CD9921B66A4F6 /* Info.plist */,
+				ED3CBEC15CD070399FEA04F4FB567CA1 /* Pods-Mastlia.modulemap */,
+				5A7C9FCD56FD94C6B7375930605B9143 /* Pods-Mastlia-acknowledgements.markdown */,
+				8AC6334E5A95EB32713A15F0143161BF /* Pods-Mastlia-acknowledgements.plist */,
+				D8BCD8034A0DECA2CCDD01FE46963074 /* Pods-Mastlia-dummy.m */,
+				CC6664085986BB7521D782725E27249A /* Pods-Mastlia-frameworks.sh */,
+				1950543E82A930D696FE3D4CBAAA0044 /* Pods-Mastlia-resources.sh */,
+				28D68C6C7B4F2822D683E4B22545E68A /* Pods-Mastlia-umbrella.h */,
+				541D810EE7C0ABCD1C25F8F89DCBE67A /* Pods-Mastlia.debug.xcconfig */,
+				712B331E0E9EEB5CB206E31B937A93D1 /* Pods-Mastlia.release.xcconfig */,
+			);
+			name = "Pods-Mastlia";
+			path = "Target Support Files/Pods-Mastlia";
+			sourceTree = "<group>";
+		};
+		279FD49B2452C7C9095E7A5DDE900AAD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				56E1EA84B31D22D1019D579BE6244A49 /* Info.plist */,
+				3A4D6CB6C9AD12115A22E867D5FE6592 /* MastodonKit.modulemap */,
+				476A4499C76FD1D82005C798355AB75B /* MastodonKit.xcconfig */,
+				A61025EA16A19C13C6FF2B4FF3F0F9F9 /* MastodonKit-dummy.m */,
+				457B5783BD92A422EA814FC54F7A9152 /* MastodonKit-prefix.pch */,
+				19EE3B0E625432A27154D7AAC46F71D6 /* MastodonKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MastodonKit";
+			sourceTree = "<group>";
+		};
+		303C1C493A9902452323867949CD29CA /* Pods-MastliaTests */ = {
+			isa = PBXGroup;
+			children = (
+				54B518A34E49F6BFFF440A3E3442EA64 /* Info.plist */,
+				CF19477221132996AD57D9BCA0FB8263 /* Pods-MastliaTests.modulemap */,
+				4359E634C03A5F829039E3384DD02376 /* Pods-MastliaTests-acknowledgements.markdown */,
+				41E391125A067059492AE88B244A0DD7 /* Pods-MastliaTests-acknowledgements.plist */,
+				F5066798BB4A74F15AEEDF486636DDAA /* Pods-MastliaTests-dummy.m */,
+				F84EDC3F5125B8367BD64FA4C1D6A2D7 /* Pods-MastliaTests-frameworks.sh */,
+				A82B15B0E549C7AE146B74C6B71ADD96 /* Pods-MastliaTests-resources.sh */,
+				D629188BE1CDA9A8617F9ABB4A5050C5 /* Pods-MastliaTests-umbrella.h */,
+				65493BF34B1822AD13BA76F17F1E5C25 /* Pods-MastliaTests.debug.xcconfig */,
+				20FE937DA46B3AF97A94442AD8E7F123 /* Pods-MastliaTests.release.xcconfig */,
+			);
+			name = "Pods-MastliaTests";
+			path = "Target Support Files/Pods-MastliaTests";
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		68534F690284B9905195F35A0B13B26E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6780DFD1C889F423B8EB0FA47C800 /* MastodonKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A25C406D6584010B8780FD2956516C5 /* Pods-MastliaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE44692FB50E080BBB10D744F0D85790 /* Info.plist */,
+				4A7BAE7526FE9CED409D756631399DFF /* Pods-MastliaUITests.modulemap */,
+				5CCB16C97FDC5D866D075DA99CD57CF7 /* Pods-MastliaUITests-acknowledgements.markdown */,
+				798BD7305E6DDEA45A0A8540211881B8 /* Pods-MastliaUITests-acknowledgements.plist */,
+				DFE0962D97F3132DD982EAE26D29A1F7 /* Pods-MastliaUITests-dummy.m */,
+				49518697FED7932A8E04AB15AAC1886F /* Pods-MastliaUITests-frameworks.sh */,
+				CEF2EE26CF87FD0231BE57FD577260D5 /* Pods-MastliaUITests-resources.sh */,
+				044D3FE30BFCA72A2F2A5AD94889D5E9 /* Pods-MastliaUITests-umbrella.h */,
+				5BB31E3FD655FE5E1EBC7928CEA62798 /* Pods-MastliaUITests.debug.xcconfig */,
+				1FD099CF5C5DA2C409882F09F1227492 /* Pods-MastliaUITests.release.xcconfig */,
+			);
+			name = "Pods-MastliaUITests";
+			path = "Target Support Files/Pods-MastliaUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				68534F690284B9905195F35A0B13B26E /* Pods */,
+				9F19E3C416F3E8493E964673AD9E997B /* Products */,
+				9DA275BE33D758D8D18D4B553D24635A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9DA275BE33D758D8D18D4B553D24635A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C366042747CA00FB95C0B25BCB92F43 /* Pods-Mastlia */,
+				303C1C493A9902452323867949CD29CA /* Pods-MastliaTests */,
+				7A25C406D6584010B8780FD2956516C5 /* Pods-MastliaUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9F19E3C416F3E8493E964673AD9E997B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E24A085D8D2F1103F36AE8DBB9E0AA6 /* MastodonKit.framework */,
+				CC6313D35076D6313D9E5A06AB0942EC /* Pods_Mastlia.framework */,
+				441371EA7E5C4D2BA320826391D0B391 /* Pods_MastliaTests.framework */,
+				798F36425CC4E4033553D09A7CA33928 /* Pods_MastliaUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9F6780DFD1C889F423B8EB0FA47C800 /* MastodonKit */ = {
+			isa = PBXGroup;
+			children = (
+				1FA31BDBDEB6341486C745AE5CFAB574 /* AccessScope.swift */,
+				4EF4100F5F7A21A558999D9A1B64E74E /* Account.swift */,
+				39ECEECB3D6E33C0B76E3395B0684480 /* Accounts.swift */,
+				16634888C1AD066F925B6827FC559FE0 /* Application.swift */,
+				CA73ED291DD2F4171E831EA484C5F7CA /* Attachment.swift */,
+				695715A3248360439138ED7C8E3B978D /* AttachmentType.swift */,
+				A820583A2C7DEEA26F346A676581DBE3 /* Blocks.swift */,
+				0A93282491B95249AEFAEFAF3F4C7260 /* Card.swift */,
+				FD0071872A342067BB6B8A1EDBCB4F0A /* CharacterSet.swift */,
+				334740CA5472AC617ECA3D8693329E8D /* Client.swift */,
+				6D29ABA8E4443C4BE449C62D7A4CFF53 /* ClientApplication.swift */,
+				7DB3E12D770C451B06DAB946971A554A /* ClientError.swift */,
+				38267103FCDEB4277E6682CF2BDEDA8F /* Clients.swift */,
+				E8E0862AE175148FE7066A4C755F949B /* Context.swift */,
+				0DC83FD52057CDBDDC6FA06F7B790403 /* Data.swift */,
+				DC855B74DD2490BEF95FA729CB30B2F1 /* DateFormatter.swift */,
+				BECE37FDA43128E3D56A22BBFA20EB44 /* Favourites.swift */,
+				B893275625690886BB6851518F85A56D /* FollowRequests.swift */,
+				8C445EC6171B3EAF01AD77A97E0FCA22 /* Functions.swift */,
+				2EB93D3DA55D5AD128B4C14D5FC0EF2B /* HTTPMethod.swift */,
+				35423A173121F8448963251FEB55AF68 /* Instance.swift */,
+				008FFCD9D465DBB66E9986865B59ADC2 /* Instances.swift */,
+				CD8E9D3B5080B18C82DAF3879873FF6B /* Login.swift */,
+				57F1F37F7F113D7F0489C0878A9E213B /* LoginSettings.swift */,
+				F3CB1A8EBB01D2D0082630A338000976 /* Media.swift */,
+				8A0477E554CB25DED349522FE200DC86 /* MediaAttachment.swift */,
+				A13EAA4EC6E426A3285A2498508AE9A8 /* Mention.swift */,
+				9F2A1F9986F4CEA77A671CC09D7F364F /* Mutes.swift */,
+				77D19AA3749C91C2604AA2D99A38C730 /* Notification.swift */,
+				B90CA907E13E03F982CF9EFED52FBFBE /* Notifications.swift */,
+				54D94831B063AE0FEA3A93B67A0E556E /* NotificationType.swift */,
+				B631674A6CF185932CB8E90119E7190A /* Parameter.swift */,
+				0C60307A678F90443A71FE13092E7014 /* Payload.swift */,
+				95311935ABC270065D0BBE287FED360A /* Relationship.swift */,
+				DDADA6DCCA3A44FE65B035721C7B6FAF /* Report.swift */,
+				DA890685A3A9B4D57A9261FFCD10C42F /* Reports.swift */,
+				27D937716E17763491F8426755FCBF30 /* Request.swift */,
+				983AADBFCF51D96BB615912D362C36FF /* RequestError.swift */,
+				5DA5D964B44CED080A0EA4E8DA9619F7 /* RequestRange.swift */,
+				5B10C640ABE1B2E7FF0B28177769F73D /* Requests.swift */,
+				DD0FFDF59D6AB53CC601A66F24F5C9F7 /* Results.swift */,
+				B2DCEF60394613AE42DD548CC91BABD5 /* Search.swift */,
+				7D7E228FD98E6061DDE27E6955217914 /* Status.swift */,
+				C218BCE3B43EF34CBFB9A3E83A825267 /* Statuses.swift */,
+				B97C827CC01CC31B1282665530764357 /* Tag.swift */,
+				192D4776EA87B89D4DA0725F3A52F900 /* Timelines.swift */,
+				E7AC8F083132611D9B412EDF3629FA76 /* URLComponents.swift */,
+				1B6F7CA371ADCB7CE65B88FCB2608A85 /* URLRequest.swift */,
+				1FA3020108B0E69C73D94EE26D0D81C8 /* Visibility.swift */,
+				279FD49B2452C7C9095E7A5DDE900AAD /* Support Files */,
+			);
+			name = MastodonKit;
+			path = MastodonKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		58480F523A59E2E482545D4F816003E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF82BFFAE9C2A0C3EC891B7341D2755 /* Pods-Mastlia-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C541FB17A2BCB29F1305E032BCC62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0709308E855A55A76A2F47B17687A8D1 /* Pods-MastliaTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DEE1A939CE5858DFCD8FDC41DA6FA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2216E2215A4DFCD8B7B1EC32A5AE766A /* MastodonKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E43EA6535E7CAA3BB93B5F2056B9EF1F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8CFFFF8811101C7C978BFAC4060B50 /* Pods-MastliaUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1B0FED8EAAEDFB6FAF7DBB0DD50F7DAD /* Pods-MastliaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE70F925DA9231E3136420095CDDF860 /* Build configuration list for PBXNativeTarget "Pods-MastliaUITests" */;
+			buildPhases = (
+				E43EA6535E7CAA3BB93B5F2056B9EF1F /* Headers */,
+				D8F23F6A8AC86F897923728B1C888546 /* Sources */,
+				E4FEE3673DCA0FBC7C4EEE44E1C72DF8 /* Frameworks */,
+				57484DC91EF5C361FB9C85D932084025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A8849404D7D82D748412BA8F8E8C6B3 /* PBXTargetDependency */,
+			);
+			name = "Pods-MastliaUITests";
+			productName = "Pods-MastliaUITests";
+			productReference = 798F36425CC4E4033553D09A7CA33928 /* Pods_MastliaUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6B8F1CB03BD73FA4BE1520C86484C3E4 /* MastodonKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CDC289A556F9DD919D4FA4DA573518B /* Build configuration list for PBXNativeTarget "MastodonKit" */;
+			buildPhases = (
+				A6DEE1A939CE5858DFCD8FDC41DA6FA5 /* Headers */,
+				628318A0C40FD5215C4AE6C89ABC615C /* Sources */,
+				32471CE1B4D8A64D68DD6D10FEA3EDDD /* Frameworks */,
+				299EA8E183D6337AA8FE7840E4709158 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MastodonKit;
+			productName = MastodonKit;
+			productReference = 4E24A085D8D2F1103F36AE8DBB9E0AA6 /* MastodonKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4C1D82F0D7AC0890016DE49829C23AB /* Pods-Mastlia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76894CD3998329FE90CDF917FD8CB4FC /* Build configuration list for PBXNativeTarget "Pods-Mastlia" */;
+			buildPhases = (
+				58480F523A59E2E482545D4F816003E5 /* Headers */,
+				233260852487B25F11616338DB6F2C91 /* Sources */,
+				0CF83D8D3C4F0942CAC715BAA0AA3C8D /* Frameworks */,
+				17D4A1DE6D54A3BE217C5166F07691EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				610D38E72898DB1B9BA69338F456B098 /* PBXTargetDependency */,
+			);
+			name = "Pods-Mastlia";
+			productName = "Pods-Mastlia";
+			productReference = CC6313D35076D6313D9E5A06AB0942EC /* Pods_Mastlia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA3500DE7CDA92E1BFED9E659F5BA8BE /* Pods-MastliaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C420963D673A797D0068717477D47D0B /* Build configuration list for PBXNativeTarget "Pods-MastliaTests" */;
+			buildPhases = (
+				A55C541FB17A2BCB29F1305E032BCC62 /* Headers */,
+				B490113ABCCBA0C7462F4C9586D3902C /* Sources */,
+				6817A41AE920FBCBC8F3F7855BAB7E9C /* Frameworks */,
+				392E7D445C579F030B3CBA49E82D3854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7497E214CBB2D3B1B38299CD2307A39C /* PBXTargetDependency */,
+			);
+			name = "Pods-MastliaTests";
+			productName = "Pods-MastliaTests";
+			productReference = 441371EA7E5C4D2BA320826391D0B391 /* Pods_MastliaTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9F19E3C416F3E8493E964673AD9E997B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B8F1CB03BD73FA4BE1520C86484C3E4 /* MastodonKit */,
+				D4C1D82F0D7AC0890016DE49829C23AB /* Pods-Mastlia */,
+				DA3500DE7CDA92E1BFED9E659F5BA8BE /* Pods-MastliaTests */,
+				1B0FED8EAAEDFB6FAF7DBB0DD50F7DAD /* Pods-MastliaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17D4A1DE6D54A3BE217C5166F07691EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299EA8E183D6337AA8FE7840E4709158 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		392E7D445C579F030B3CBA49E82D3854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57484DC91EF5C361FB9C85D932084025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		233260852487B25F11616338DB6F2C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56572742C1C25E7C1B72F070C23560C /* Pods-Mastlia-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		628318A0C40FD5215C4AE6C89ABC615C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110FB6E9D969B380962CE89E1F40CD9C /* AccessScope.swift in Sources */,
+				81E9C927E8F6644E4F3F8AAC7A7B624E /* Account.swift in Sources */,
+				8D299D7FA20C3002BB6B0262694C04D7 /* Accounts.swift in Sources */,
+				D92B123F8C627814DA17138FBE602898 /* Application.swift in Sources */,
+				46409FC1237D5BB48A73A5521CF8388B /* Attachment.swift in Sources */,
+				D2D35315740458CE6F8E6DB62D61866F /* AttachmentType.swift in Sources */,
+				3075F9B20667F23120050ECF33B1D274 /* Blocks.swift in Sources */,
+				66E8B1E74F16D210B0369E015F56996D /* Card.swift in Sources */,
+				C04D014B8677DBE6F9F51828D4F57929 /* CharacterSet.swift in Sources */,
+				EF7172460DA07553FDA0171F387768E7 /* Client.swift in Sources */,
+				84332C4FCFBFD48EBE308FB41FD63E0C /* ClientApplication.swift in Sources */,
+				FFC10AF1B9D148D2509AE8F8818F0303 /* ClientError.swift in Sources */,
+				4D4CE34665392C2CFFE1F0EF22B7A6A0 /* Clients.swift in Sources */,
+				C375340575E7737EDAAD344DA2E6FC03 /* Context.swift in Sources */,
+				D900543A34CA7BAF44BACA40E6249E54 /* Data.swift in Sources */,
+				FC85A098508C62043F512E61ABB1E15C /* DateFormatter.swift in Sources */,
+				BC479E3C0F08ABC6CD1CC9B447F0BCAD /* Favourites.swift in Sources */,
+				91A5E427C56740E6CD827219EFF6D3C0 /* FollowRequests.swift in Sources */,
+				0898E32166F63A9C22AD0305187DECED /* Functions.swift in Sources */,
+				6A880B0CFD1404A9EEDD5E1386ED9C21 /* HTTPMethod.swift in Sources */,
+				C7006056EE720E6EE64B3909BE466846 /* Instance.swift in Sources */,
+				937E779CCD84A50853437E35D43986CE /* Instances.swift in Sources */,
+				0F3DBA92853E31F20F6ABE7A0CF4ADF3 /* Login.swift in Sources */,
+				DFB66F82FDDDADBF483376F0EECABB3D /* LoginSettings.swift in Sources */,
+				C6072F59F5318CA10618EDAECB3DB3DB /* MastodonKit-dummy.m in Sources */,
+				B4D7FD5EC228F3A329A1599D95AA1D30 /* Media.swift in Sources */,
+				BC22EEA07A2508E8E54F48F239F34A85 /* MediaAttachment.swift in Sources */,
+				CA99507682913703F4286043A606CF43 /* Mention.swift in Sources */,
+				FE84CF561031E01EC7C9606A90AF40AC /* Mutes.swift in Sources */,
+				4A20447401B3BCC9826774D9C2643D15 /* Notification.swift in Sources */,
+				B3C34BB3441D29442BE6E47ABEE9F26E /* Notifications.swift in Sources */,
+				767691D482FA5678F8E6DEB8846E0866 /* NotificationType.swift in Sources */,
+				E542F1282DD53969B3DA4F2EF27826A0 /* Parameter.swift in Sources */,
+				15D2CCAACBACCB965387767CDE42C0EF /* Payload.swift in Sources */,
+				7F2BC6449FC148AD5991C310E6A94B2C /* Relationship.swift in Sources */,
+				C4CB8AD7FB1C2522EEE949375558EEBB /* Report.swift in Sources */,
+				D13B06C6BD23A3286D8159F9FFC59719 /* Reports.swift in Sources */,
+				914B23A7CE6521E1468CADB9BD38B712 /* Request.swift in Sources */,
+				838DD306C0DCFBD54941FA9437B66DA8 /* RequestError.swift in Sources */,
+				E7D7E24B5F9714B6B50431556E400F3D /* RequestRange.swift in Sources */,
+				B52CEAEE1FC8296413722A5055A0F4B5 /* Requests.swift in Sources */,
+				F18B9809C6989EB48A58420AAC47930D /* Results.swift in Sources */,
+				C06FD3F1231031084B2618FEA08A271A /* Search.swift in Sources */,
+				733FDCA741D09CBEC979A900E31450BB /* Status.swift in Sources */,
+				003F67BA2028D5FB4494986826C74467 /* Statuses.swift in Sources */,
+				4058115C72863FD38354CF0CA970BCEA /* Tag.swift in Sources */,
+				664F07B82B2EE4A62CEFEBCFBFF75599 /* Timelines.swift in Sources */,
+				52934CC6A1FEAC54C6E306FB3F560ABA /* URLComponents.swift in Sources */,
+				FBC6E031AA6BF0E46AD11011CEE5F916 /* URLRequest.swift in Sources */,
+				01AEF65C1C07E7214C0ED3DAC45C6F24 /* Visibility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B490113ABCCBA0C7462F4C9586D3902C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C155875B6AA1B87A2C1F49EA73598F90 /* Pods-MastliaTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F23F6A8AC86F897923728B1C888546 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3E38C059C22284D23A780AB28DF871 /* Pods-MastliaUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A8849404D7D82D748412BA8F8E8C6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Mastlia";
+			target = D4C1D82F0D7AC0890016DE49829C23AB /* Pods-Mastlia */;
+			targetProxy = 3D66826DD8F09F248E9EED3C292CA003 /* PBXContainerItemProxy */;
+		};
+		610D38E72898DB1B9BA69338F456B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MastodonKit;
+			target = 6B8F1CB03BD73FA4BE1520C86484C3E4 /* MastodonKit */;
+			targetProxy = 8A649113B0C5BCAEC4FCF04B8DD6DE6E /* PBXContainerItemProxy */;
+		};
+		7497E214CBB2D3B1B38299CD2307A39C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Mastlia";
+			target = D4C1D82F0D7AC0890016DE49829C23AB /* Pods-Mastlia */;
+			targetProxy = 927CBFB8B66CD07C9B46299C87A7F2E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AA3B91655AF95B1F49159CD8085CD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		11E2131687AE9434522C5F5CF8C69F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476A4499C76FD1D82005C798355AB75B /* MastodonKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MastodonKit/MastodonKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MastodonKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MastodonKit/MastodonKit.modulemap";
+				PRODUCT_MODULE_NAME = MastodonKit;
+				PRODUCT_NAME = MastodonKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		281D645B4C97478244A52C7C1AA0FD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD099CF5C5DA2C409882F09F1227492 /* Pods-MastliaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MastliaUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MastliaUITests/Pods-MastliaUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A90E363F7E053ACC07E3963F50D9F8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB31E3FD655FE5E1EBC7928CEA62798 /* Pods-MastliaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MastliaUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MastliaUITests/Pods-MastliaUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8000995DA02063BF3777393CD52061DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8AC391C8ABD1B75DD29B4F829386FC59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476A4499C76FD1D82005C798355AB75B /* MastodonKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MastodonKit/MastodonKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MastodonKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MastodonKit/MastodonKit.modulemap";
+				PRODUCT_MODULE_NAME = MastodonKit;
+				PRODUCT_NAME = MastodonKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C256487F6F32E37E90582DB744875DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 712B331E0E9EEB5CB206E31B937A93D1 /* Pods-Mastlia.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Mastlia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mastlia/Pods-Mastlia.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3471FFCCF87065E4E8548954016E9CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20FE937DA46B3AF97A94442AD8E7F123 /* Pods-MastliaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MastliaTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MastliaTests/Pods-MastliaTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E94B00C5B00D1B2D5AD2E6AB8A20053A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541D810EE7C0ABCD1C25F8F89DCBE67A /* Pods-Mastlia.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Mastlia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mastlia/Pods-Mastlia.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD72B581A0B05F8AE49ECF60C18CD43C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65493BF34B1822AD13BA76F17F1E5C25 /* Pods-MastliaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MastliaTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MastliaTests/Pods-MastliaTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA3B91655AF95B1F49159CD8085CD89 /* Debug */,
+				8000995DA02063BF3777393CD52061DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76894CD3998329FE90CDF917FD8CB4FC /* Build configuration list for PBXNativeTarget "Pods-Mastlia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94B00C5B00D1B2D5AD2E6AB8A20053A /* Debug */,
+				C256487F6F32E37E90582DB744875DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CDC289A556F9DD919D4FA4DA573518B /* Build configuration list for PBXNativeTarget "MastodonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC391C8ABD1B75DD29B4F829386FC59 /* Debug */,
+				11E2131687AE9434522C5F5CF8C69F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE70F925DA9231E3136420095CDDF860 /* Build configuration list for PBXNativeTarget "Pods-MastliaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A90E363F7E053ACC07E3963F50D9F8E /* Debug */,
+				281D645B4C97478244A52C7C1AA0FD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C420963D673A797D0068717477D47D0B /* Build configuration list for PBXNativeTarget "Pods-MastliaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD72B581A0B05F8AE49ECF60C18CD43C /* Debug */,
+				C3471FFCCF87065E4E8548954016E9CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
