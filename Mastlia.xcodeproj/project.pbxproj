@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BEFF2054FA5D91B485FEB9D /* Pods_MastliaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40493F5860D6B39D0342D33C /* Pods_MastliaUITests.framework */; };
 		5121E352D3A8D621FA8AC4AE /* Pods_MastliaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EA6D0B308FCDE7F5E57A87 /* Pods_MastliaTests.framework */; };
+		520003C421A7AC62002E90BF /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520003C321A7AC62002E90BF /* login.storyboard */; };
+		520003C621A7AF10002E90BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520003C521A7AF10002E90BF /* LoginViewController.swift */; };
 		5273ECD521A63B7C006F95FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD421A63B7C006F95FB /* AppDelegate.swift */; };
 		5273ECD721A63B7C006F95FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD621A63B7C006F95FB /* ViewController.swift */; };
 		5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECD821A63B7C006F95FB /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		1D840151FF9AF9D30C423E5B /* Pods-MastliaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MastliaUITests/Pods-MastliaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E249CFF2E61160EFB452ACF /* Pods-MastliaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MastliaTests/Pods-MastliaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		40493F5860D6B39D0342D33C /* Pods_MastliaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MastliaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		520003C321A7AC62002E90BF /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
+		520003C521A7AF10002E90BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5273ECD121A63B7C006F95FB /* Mastlia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastlia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5273ECD421A63B7C006F95FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5273ECD621A63B7C006F95FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				5273ECDB21A63B7E006F95FB /* Assets.xcassets */,
 				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 				5273ECE021A63B7E006F95FB /* Info.plist */,
+				520003C321A7AC62002E90BF /* login.storyboard */,
+				520003C521A7AF10002E90BF /* LoginViewController.swift */,
 			);
 			path = Mastlia;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520003C421A7AC62002E90BF /* login.storyboard in Resources */,
 				5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */,
 				5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */,
 				5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */,
@@ -391,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520003C621A7AF10002E90BF /* LoginViewController.swift in Sources */,
 				5273ECD721A63B7C006F95FB /* ViewController.swift in Sources */,
 				5273ECD521A63B7C006F95FB /* AppDelegate.swift in Sources */,
 			);
