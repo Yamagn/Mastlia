@@ -49,6 +49,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VaT-fT-zxw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lrb-JP-es4" id="uH7-b4-sDi"/>
+                                    <outlet property="delegate" destination="lrb-JP-es4" id="U0l-4w-cCu"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,6 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WRx-0m-ooW"/>
                     <connections>
+                        <outlet property="tableView" destination="VaT-fT-zxw" id="rjw-sg-eXZ"/>
                         <segue destination="12j-OD-Ozh" kind="presentation" identifier="moveLoginView" id="2ab-2a-fdC"/>
                     </connections>
                 </viewController>

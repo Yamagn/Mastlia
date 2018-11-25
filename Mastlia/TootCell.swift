@@ -13,6 +13,12 @@ class TootCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
     @IBOutlet weak var tootContent: UILabel!
+    @IBOutlet weak var replyButton: UIButton!
+    @IBOutlet weak var retweetButton: UIButton!
+    @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var repCount: UILabel!
+    @IBOutlet weak var retCount: UILabel!
+    @IBOutlet weak var favCount: UILabel!
     @IBAction func onReplyTapped(_ sender: Any) {
     }
     @IBAction func onBoostTapped(_ sender: Any) {

@@ -22,6 +22,13 @@
 		5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */; };
 		5273ECEA21A63B7E006F95FB /* MastliaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECE921A63B7E006F95FB /* MastliaTests.swift */; };
 		5273ECF521A63B7E006F95FB /* MastliaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECF421A63B7E006F95FB /* MastliaUITests.swift */; };
+		52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8329321AA9FBB008F41F5 /* Toots.swift */; };
+		52A8329621AAC35B008F41F5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329521AAC35B008F41F5 /* home.png */; };
+		52A8329821AAC391008F41F5 /* notify.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329721AAC391008F41F5 /* notify.png */; };
+		52A8329A21AAC39F008F41F5 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329921AAC39F008F41F5 /* person.png */; };
+		52A8329C21AAC3AE008F41F5 /* retweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329B21AAC3AE008F41F5 /* retweet.png */; };
+		52A8329E21AAC3BD008F41F5 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329D21AAC3BD008F41F5 /* star.png */; };
+		52A832A021AAC45C008F41F5 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329F21AAC45C008F41F5 /* reply.png */; };
 		D470662BEE15CB538ED57043 /* Pods_Mastlia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEADFAC15B2B0CAFE56B9F /* Pods_Mastlia.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,13 @@
 		5273ECF021A63B7E006F95FB /* MastliaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MastliaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5273ECF421A63B7E006F95FB /* MastliaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastliaUITests.swift; sourceTree = "<group>"; };
 		5273ECF621A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A8329321AA9FBB008F41F5 /* Toots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toots.swift; sourceTree = "<group>"; };
+		52A8329521AAC35B008F41F5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../../../../Pictures/baseline-home-black-18/2x/home.png"; sourceTree = "<group>"; };
+		52A8329721AAC391008F41F5 /* notify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notify.png; path = "../../../../Pictures/baseline-notifications-black-18/2x/notify.png"; sourceTree = "<group>"; };
+		52A8329921AAC39F008F41F5 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = person.png; path = "../../../../Pictures/baseline-person-black-18/2x/person.png"; sourceTree = "<group>"; };
+		52A8329B21AAC3AE008F41F5 /* retweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retweet.png; path = "../../../../Pictures/baseline-repeat-black-18/2x/retweet.png"; sourceTree = "<group>"; };
+		52A8329D21AAC3BD008F41F5 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = "../../../../Pictures/baseline-star_border-black-18/2x/star.png"; sourceTree = "<group>"; };
+		52A8329F21AAC45C008F41F5 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reply.png; path = "../../../../Pictures/baseline-reply-black-18/2x/reply.png"; sourceTree = "<group>"; };
 		563C230A5C2117B55B08B7D7 /* Pods-Mastlia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastlia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia.release.xcconfig"; sourceTree = "<group>"; };
 		5EDCCBCB2714C0B407E98D52 /* Pods-Mastlia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastlia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia.debug.xcconfig"; sourceTree = "<group>"; };
 		62CEADFAC15B2B0CAFE56B9F /* Pods_Mastlia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mastlia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,19 +128,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		524D579D21A7F07F003FD9B7 /* Resource */ = {
+		524D579D21A7F07F003FD9B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52A8329F21AAC45C008F41F5 /* reply.png */,
+				52A8329D21AAC3BD008F41F5 /* star.png */,
+				52A8329B21AAC3AE008F41F5 /* retweet.png */,
+				52A8329921AAC39F008F41F5 /* person.png */,
+				52A8329721AAC391008F41F5 /* notify.png */,
+				52A8329521AAC35B008F41F5 /* home.png */,
 				520003C321A7AC62002E90BF /* login.storyboard */,
 				5273ECD821A63B7C006F95FB /* Main.storyboard */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		524D57A821A85E23003FD9B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				524D57A621A84A3D003FD9B7 /* Account.swift */,
+				52A8329321AA9FBB008F41F5 /* Toots.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				524D57A821A85E23003FD9B7 /* Models */,
-				524D579D21A7F07F003FD9B7 /* Resource */,
+				524D579D21A7F07F003FD9B7 /* Resources */,
 				5273ECD421A63B7C006F95FB /* AppDelegate.swift */,
 				5273ECD621A63B7C006F95FB /* ViewController.swift */,
 				5273ECDB21A63B7E006F95FB /* Assets.xcassets */,
@@ -308,9 +329,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				520003C421A7AC62002E90BF /* login.storyboard in Resources */,
+				52A8329821AAC391008F41F5 /* notify.png in Resources */,
+				52A8329A21AAC39F008F41F5 /* person.png in Resources */,
+				52A8329E21AAC3BD008F41F5 /* star.png in Resources */,
 				5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */,
+				52A8329C21AAC3AE008F41F5 /* retweet.png in Resources */,
+				52A832A021AAC45C008F41F5 /* reply.png in Resources */,
 				524D57A321A83933003FD9B7 /* TootCell.xib in Resources */,
 				5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */,
+				52A8329621AAC35B008F41F5 /* home.png in Resources */,
 				5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +390,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
 				"${BUILT_PRODUCTS_DIR}/MastodonKit/MastodonKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -371,6 +399,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MastodonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -436,6 +465,7 @@
 				5273ECD521A63B7C006F95FB /* AppDelegate.swift in Sources */,
 				524D57A521A8409E003FD9B7 /* TimeLineViewController.swift in Sources */,
 				524D57A221A83933003FD9B7 /* TootCell.swift in Sources */,
+				52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */,
 				524D57A721A84A3D003FD9B7 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
