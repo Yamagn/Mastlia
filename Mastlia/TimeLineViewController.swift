@@ -12,13 +12,13 @@ import MastodonKit
 
 class TimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-    
     var user: Account = Account()
     var dataList: [Status] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let realm = try! Realm()
+
         let users = realm.objects(Account.self)
         user = users[0]
         if users.count == 0 {
@@ -72,6 +72,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.userName.text = data.account.displayName
         print(data.account.avatar)
         cell.userImage.setImage(fromUrl: data.account.avatar)
+        cell.id = data.id
         
         return cell
     }

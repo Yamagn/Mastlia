@@ -29,10 +29,6 @@ class ViewController: UIViewController {
                 print("client secret: \(application.clientSecret)")
             }
         }
-        
-        
     }
-
-
 }
 
