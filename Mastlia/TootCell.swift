@@ -12,8 +12,6 @@ import RealmSwift
 
 class TootCell: UITableViewCell {
     var user: Account = Account()
-    var config = URLSessionConfiguration.default
-    var session = URLSession()
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
@@ -24,51 +22,112 @@ class TootCell: UITableViewCell {
     @IBOutlet weak var repCount: UILabel!
     @IBOutlet weak var retCount: UILabel!
     @IBOutlet weak var favCount: UILabel!
+    var isFavorited = false
+    var isRebloged = false
     var id: String = ""
+    
+    func judge() {
+        if isFavorited {
+            starButton.tintColor = UIColor.yellow
+        } else {
+            starButton.tintColor = UIColor.black
+        }
+        if isRebloged {
+            retweetButton.tintColor = UIColor.green
+        } else {
+            retweetButton.tintColor = UIColor.black
+        }
+    }
+    
     @IBAction func onReplyTapped(_ sender: Any) {
     }
     @IBAction func onBoostTapped(_ sender: Any) {
-        initialize()
-        let client = Client(baseURL: "https://" + user.domain, accessToken: user.accessToken, session: session)
-        let req = Statuses.reblog(id: id)
+        if !isRebloged {
+            var client = Client(baseURL: "https://" + user.domain)
+            client.accessToken = user.accessToken
+            let req = Statuses.reblog(id: id)
+            client.run(req) { result in
+                if let res = result.value {
+                    self.isRebloged = true
+                    DispatchQueue.main.async {
+                        self.retweetButton.tintColor = UIColor.green
+                    }
+                    print(res)
+                    return
+                } else {
+                    print(result)
+                    return
+                }
+            }
+            return
+        }
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        let req = Statuses.unreblog(id: id)
         client.run(req) { result in
             if let res = result.value {
+                self.isRebloged = false
                 DispatchQueue.main.async {
-                    self.retweetButton.tintColor = UIColor.green
+                    self.retweetButton.tintColor = UIColor.black
                 }
                 print(res)
                 return
             } else {
+                print(result)
                 return
             }
         }
     }
     @IBAction func onFavTapped(_ sender: Any) {
-        initialize()
-        let req = Statuses.favourite(id: id)
-        let client = Client(baseURL: "https://" + user.domain, accessToken: user.accessToken, session: session)
+        if !isFavorited {
+            let req = Statuses.favourite(id: id)
+            var client = Client(baseURL: "https://" + user.domain)
+            client.accessToken = user.accessToken
+            client.run(req) { result in
+                if let res = result.value {
+                    self.isFavorited = true
+                    DispatchQueue.main.async {
+                        self.starButton.tintColor = UIColor.yellow
+                    }
+                    print(res)
+                    return
+                } else {
+                    print(result)
+                    return
+                }
+            }
+            return
+        }
+        let req = Statuses.unfavourite(id: id)
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
         client.run(req) { result in
             if let res = result.value {
+                self.isFavorited = false
                 DispatchQueue.main.async {
-                    self.starButton.tintColor = UIColor.yellow
+                    self.starButton.tintColor = UIColor.black
                 }
                 print(res)
                 return
             } else {
+                print(result)
                 return
             }
         }
-    }
-    
-    func initialize() {
-        let realm: Realm = try! Realm()
-        let users = realm.objects(Account.self)
-        self.user = users[0]
+        return
+        
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        if isFavorited {
+            starButton.tintColor = UIColor.yellow
+        }
+        if isRebloged {
+            retweetButton.tintColor = UIColor.green
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

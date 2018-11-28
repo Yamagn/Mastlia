@@ -44,23 +44,25 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-7W-WWg">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-7W-WWg">
                         <rect key="frame" x="134" y="171" width="24" height="27"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="8lc-ur-q5P"/>
                             <constraint firstAttribute="width" constant="24" id="eWe-zS-dbd"/>
                         </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal" image="retweet.png"/>
                         <connections>
                             <action selector="onBoostTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fR0-4C-3jH"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-zw-vde">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-zw-vde">
                         <rect key="frame" x="242" y="171" width="24" height="27"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="24" id="Gcc-jZ-JmY"/>
                             <constraint firstAttribute="height" constant="27" id="Vfe-h0-G5H"/>
                         </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal" image="star.png"/>
                         <connections>
                             <action selector="onFavTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ce0-2f-fKa"/>

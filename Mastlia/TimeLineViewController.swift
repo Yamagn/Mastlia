@@ -73,6 +73,11 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         print(data.account.avatar)
         cell.userImage.setImage(fromUrl: data.account.avatar)
         cell.id = data.id
+        cell.user.domain = self.user.domain
+        cell.user.accessToken = self.user.accessToken
+        cell.isFavorited = data.favourited ?? false
+        cell.isRebloged = data.reblogged ?? false
+        cell.judge()
         
         return cell
     }
