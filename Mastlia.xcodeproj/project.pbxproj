@@ -15,6 +15,22 @@
 		524D57A321A83933003FD9B7 /* TootCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524D57A121A83933003FD9B7 /* TootCell.xib */; };
 		524D57A521A8409E003FD9B7 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */; };
 		524D57A721A84A3D003FD9B7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D57A621A84A3D003FD9B7 /* Account.swift */; };
+		52677A3721B02C90005F6C43 /* timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3621B02C8F005F6C43 /* timeline.png */; };
+		52677A3921B02CBE005F6C43 /* timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3821B02CBE005F6C43 /* timeline@2x.png */; };
+		52677A3B21B02CD3005F6C43 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3A21B02CD3005F6C43 /* home.png */; };
+		52677A3D21B02CE1005F6C43 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3C21B02CE1005F6C43 /* home@2x.png */; };
+		52677A3F21B02D14005F6C43 /* notify.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3E21B02D14005F6C43 /* notify.png */; };
+		52677A4121B02D21005F6C43 /* notify.@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4021B02D21005F6C43 /* notify.@2x.png */; };
+		52677A4321B02D3E005F6C43 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4221B02D3E005F6C43 /* person.png */; };
+		52677A4521B02D4B005F6C43 /* person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4421B02D4B005F6C43 /* person@2x.png */; };
+		52677A4721B02D69005F6C43 /* retweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4621B02D69005F6C43 /* retweet.png */; };
+		52677A4921B02D78005F6C43 /* retweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4821B02D78005F6C43 /* retweet@2x.png */; };
+		52677A4B21B02D8C005F6C43 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4A21B02D8C005F6C43 /* reply.png */; };
+		52677A4D21B02D9D005F6C43 /* reply@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4C21B02D9D005F6C43 /* reply@2x.png */; };
+		52677A4F21B02DB1005F6C43 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A4E21B02DB1005F6C43 /* star.png */; };
+		52677A5121B02DBD005F6C43 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A5021B02DBD005F6C43 /* star@2x.png */; };
+		52677A5321B02DDC005F6C43 /* public.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A5221B02DDC005F6C43 /* public.png */; };
+		52677A5521B02DEA005F6C43 /* public@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A5421B02DEA005F6C43 /* public@2x.png */; };
 		5273ECD521A63B7C006F95FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD421A63B7C006F95FB /* AppDelegate.swift */; };
 		5273ECD721A63B7C006F95FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD621A63B7C006F95FB /* ViewController.swift */; };
 		5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECD821A63B7C006F95FB /* Main.storyboard */; };
@@ -23,12 +39,6 @@
 		5273ECEA21A63B7E006F95FB /* MastliaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECE921A63B7E006F95FB /* MastliaTests.swift */; };
 		5273ECF521A63B7E006F95FB /* MastliaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECF421A63B7E006F95FB /* MastliaUITests.swift */; };
 		52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8329321AA9FBB008F41F5 /* Toots.swift */; };
-		52A8329621AAC35B008F41F5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329521AAC35B008F41F5 /* home.png */; };
-		52A8329821AAC391008F41F5 /* notify.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329721AAC391008F41F5 /* notify.png */; };
-		52A8329A21AAC39F008F41F5 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329921AAC39F008F41F5 /* person.png */; };
-		52A8329C21AAC3AE008F41F5 /* retweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329B21AAC3AE008F41F5 /* retweet.png */; };
-		52A8329E21AAC3BD008F41F5 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329D21AAC3BD008F41F5 /* star.png */; };
-		52A832A021AAC45C008F41F5 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A8329F21AAC45C008F41F5 /* reply.png */; };
 		D470662BEE15CB538ED57043 /* Pods_Mastlia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEADFAC15B2B0CAFE56B9F /* Pods_Mastlia.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +69,22 @@
 		524D57A121A83933003FD9B7 /* TootCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TootCell.xib; sourceTree = "<group>"; };
 		524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		524D57A621A84A3D003FD9B7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		52677A3621B02C8F005F6C43 /* timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline.png; sourceTree = "<group>"; };
+		52677A3821B02CBE005F6C43 /* timeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline@2x.png"; sourceTree = "<group>"; };
+		52677A3A21B02CD3005F6C43 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		52677A3C21B02CE1005F6C43 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		52677A3E21B02D14005F6C43 /* notify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notify.png; sourceTree = "<group>"; };
+		52677A4021B02D21005F6C43 /* notify.@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notify.@2x.png"; sourceTree = "<group>"; };
+		52677A4221B02D3E005F6C43 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		52677A4421B02D4B005F6C43 /* person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person@2x.png"; sourceTree = "<group>"; };
+		52677A4621B02D69005F6C43 /* retweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retweet.png; sourceTree = "<group>"; };
+		52677A4821B02D78005F6C43 /* retweet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet@2x.png"; sourceTree = "<group>"; };
+		52677A4A21B02D8C005F6C43 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reply.png; sourceTree = "<group>"; };
+		52677A4C21B02D9D005F6C43 /* reply@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reply@2x.png"; sourceTree = "<group>"; };
+		52677A4E21B02DB1005F6C43 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		52677A5021B02DBD005F6C43 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		52677A5221B02DDC005F6C43 /* public.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = public.png; sourceTree = "<group>"; };
+		52677A5421B02DEA005F6C43 /* public@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "public@2x.png"; sourceTree = "<group>"; };
 		5273ECD121A63B7C006F95FB /* Mastlia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastlia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5273ECD421A63B7C006F95FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5273ECD621A63B7C006F95FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,12 +99,6 @@
 		5273ECF421A63B7E006F95FB /* MastliaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastliaUITests.swift; sourceTree = "<group>"; };
 		5273ECF621A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A8329321AA9FBB008F41F5 /* Toots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toots.swift; sourceTree = "<group>"; };
-		52A8329521AAC35B008F41F5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../../../../Pictures/baseline-home-black-18/2x/home.png"; sourceTree = "<group>"; };
-		52A8329721AAC391008F41F5 /* notify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notify.png; path = "../../../../Pictures/baseline-notifications-black-18/2x/notify.png"; sourceTree = "<group>"; };
-		52A8329921AAC39F008F41F5 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = person.png; path = "../../../../Pictures/baseline-person-black-18/2x/person.png"; sourceTree = "<group>"; };
-		52A8329B21AAC3AE008F41F5 /* retweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retweet.png; path = "../../../../Pictures/baseline-repeat-black-18/2x/retweet.png"; sourceTree = "<group>"; };
-		52A8329D21AAC3BD008F41F5 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = "../../../../Pictures/baseline-star_border-black-18/2x/star.png"; sourceTree = "<group>"; };
-		52A8329F21AAC45C008F41F5 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reply.png; path = "../../../../Pictures/baseline-reply-black-18/2x/reply.png"; sourceTree = "<group>"; };
 		563C230A5C2117B55B08B7D7 /* Pods-Mastlia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastlia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia.release.xcconfig"; sourceTree = "<group>"; };
 		5EDCCBCB2714C0B407E98D52 /* Pods-Mastlia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastlia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia.debug.xcconfig"; sourceTree = "<group>"; };
 		62CEADFAC15B2B0CAFE56B9F /* Pods_Mastlia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mastlia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,15 +148,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		52331DC821AED2C20094C4BF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5273ECD621A63B7C006F95FB /* ViewController.swift */,
+				520003C521A7AF10002E90BF /* LoginViewController.swift */,
+				524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		524D579D21A7F07F003FD9B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				52A8329F21AAC45C008F41F5 /* reply.png */,
-				52A8329D21AAC3BD008F41F5 /* star.png */,
-				52A8329B21AAC3AE008F41F5 /* retweet.png */,
-				52A8329921AAC39F008F41F5 /* person.png */,
-				52A8329721AAC391008F41F5 /* notify.png */,
-				52A8329521AAC35B008F41F5 /* home.png */,
+				52677A5421B02DEA005F6C43 /* public@2x.png */,
+				52677A5221B02DDC005F6C43 /* public.png */,
+				52677A5021B02DBD005F6C43 /* star@2x.png */,
+				52677A4E21B02DB1005F6C43 /* star.png */,
+				52677A4C21B02D9D005F6C43 /* reply@2x.png */,
+				52677A4A21B02D8C005F6C43 /* reply.png */,
+				52677A4821B02D78005F6C43 /* retweet@2x.png */,
+				52677A4621B02D69005F6C43 /* retweet.png */,
+				52677A4421B02D4B005F6C43 /* person@2x.png */,
+				52677A4221B02D3E005F6C43 /* person.png */,
+				52677A4021B02D21005F6C43 /* notify.@2x.png */,
+				52677A3E21B02D14005F6C43 /* notify.png */,
+				52677A3C21B02CE1005F6C43 /* home@2x.png */,
+				52677A3A21B02CD3005F6C43 /* home.png */,
+				52677A3821B02CBE005F6C43 /* timeline@2x.png */,
+				52677A3621B02C8F005F6C43 /* timeline.png */,
 				520003C321A7AC62002E90BF /* login.storyboard */,
 				5273ECD821A63B7C006F95FB /* Main.storyboard */,
 			);
@@ -177,17 +217,15 @@
 		5273ECD321A63B7C006F95FB /* Mastlia */ = {
 			isa = PBXGroup;
 			children = (
+				52331DC821AED2C20094C4BF /* Controllers */,
 				524D57A821A85E23003FD9B7 /* Models */,
 				524D579D21A7F07F003FD9B7 /* Resources */,
 				5273ECD421A63B7C006F95FB /* AppDelegate.swift */,
-				5273ECD621A63B7C006F95FB /* ViewController.swift */,
 				5273ECDB21A63B7E006F95FB /* Assets.xcassets */,
 				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 				5273ECE021A63B7E006F95FB /* Info.plist */,
-				520003C521A7AF10002E90BF /* LoginViewController.swift */,
 				524D57A021A83933003FD9B7 /* TootCell.swift */,
 				524D57A121A83933003FD9B7 /* TootCell.xib */,
-				524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */,
 			);
 			path = Mastlia;
 			sourceTree = "<group>";
@@ -328,16 +366,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52677A5521B02DEA005F6C43 /* public@2x.png in Resources */,
+				52677A4721B02D69005F6C43 /* retweet.png in Resources */,
 				520003C421A7AC62002E90BF /* login.storyboard in Resources */,
-				52A8329821AAC391008F41F5 /* notify.png in Resources */,
-				52A8329A21AAC39F008F41F5 /* person.png in Resources */,
-				52A8329E21AAC3BD008F41F5 /* star.png in Resources */,
+				52677A4F21B02DB1005F6C43 /* star.png in Resources */,
+				52677A3B21B02CD3005F6C43 /* home.png in Resources */,
+				52677A3921B02CBE005F6C43 /* timeline@2x.png in Resources */,
+				52677A4321B02D3E005F6C43 /* person.png in Resources */,
 				5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */,
-				52A8329C21AAC3AE008F41F5 /* retweet.png in Resources */,
-				52A832A021AAC45C008F41F5 /* reply.png in Resources */,
+				52677A5321B02DDC005F6C43 /* public.png in Resources */,
+				52677A3721B02C90005F6C43 /* timeline.png in Resources */,
+				52677A4B21B02D8C005F6C43 /* reply.png in Resources */,
+				52677A4521B02D4B005F6C43 /* person@2x.png in Resources */,
+				52677A4921B02D78005F6C43 /* retweet@2x.png in Resources */,
 				524D57A321A83933003FD9B7 /* TootCell.xib in Resources */,
+				52677A5121B02DBD005F6C43 /* star@2x.png in Resources */,
+				52677A3F21B02D14005F6C43 /* notify.png in Resources */,
+				52677A4121B02D21005F6C43 /* notify.@2x.png in Resources */,
 				5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */,
-				52A8329621AAC35B008F41F5 /* home.png in Resources */,
+				52677A3D21B02CE1005F6C43 /* home@2x.png in Resources */,
+				52677A4D21B02D9D005F6C43 /* reply@2x.png in Resources */,
 				5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

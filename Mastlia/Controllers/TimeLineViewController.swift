@@ -9,13 +9,21 @@
 import UIKit
 import RealmSwift
 import MastodonKit
+import Fuzi
 
 class TimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var changeTLButton: UIBarButtonItem!
+    private weak var refreshControl: UIRefreshControl!
+    
     var user: Account = Account()
     var dataList: [Status] = []
+    var isHome: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializePullToRefresh()
         
         let realm = try! Realm()
 
@@ -32,11 +40,34 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         reloadListDatas()
     }
     
+    
+    
+    @IBAction func changeTL(_ sender: Any) {
+        if isHome {
+            isHome = false
+            self.navigationItem.title = "Public"
+            changeTLButton.image = UIImage(named: "home.png")
+            reloadListDatas()
+        } else {
+            isHome = true
+            self.navigationItem.title = "Home"
+            changeTLButton.image = UIImage(named: "public.png")
+            reloadListDatas()
+        }
+    }
+    
     func reloadListDatas() {
-        let req = Timelines.home(range: .default)
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        let client = Client(baseURL: "https://" + self.user.domain, accessToken: self.user.accessToken, session: session)
+        DispatchQueue.main.async {
+            self.indicator.startAnimating()
+        }
+        let req:Request<[Status]>
+        if isHome {
+            req = Timelines.home(range: .default)
+        } else {
+            req = Timelines.public(local: true, range: .default)
+        }
+        var client = Client(baseURL: "https://" + self.user.domain)
+        client.accessToken = user.accessToken
         client.run(req) { result in
             if let statuses = result.value {
                 self.dataList = statuses
@@ -49,6 +80,10 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.present(controller, animated: true, completion: nil)
                 return
             }
+        }
+        DispatchQueue.main.async {
+            self.indicator.stopAnimating()
+            self.stopPullToRefresh()
         }
     }
     
@@ -67,8 +102,8 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.retCount.text = String(data.reblogsCount)
         cell.repCount.text = String(data.mentions.count)
         cell.favCount.text = String(data.favouritesCount)
-        cell.tootContent.text = data.content
-        cell.userID.text = data.account.username
+        cell.tootContent.text = "<html>" + data.content + "</html>"
+        cell.userID.text = "@" + data.account.username
         cell.userName.text = data.account.displayName
         print(data.account.avatar)
         cell.userImage.setImage(fromUrl: data.account.avatar)
@@ -78,8 +113,37 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.isFavorited = data.favourited ?? false
         cell.isRebloged = data.reblogged ?? false
         cell.judge()
+        htmlPerse("<html>" + data.content + "</html>")
         
         return cell
+    }
+    
+    func htmlPerse(_ content: String) {
+        do {
+            let doc = try HTMLDocument(string: content, encoding: String.Encoding.utf8)
+            print(doc)
+        } catch let error{
+            print(error)
+        }
+    }
+    
+    private func initializePullToRefresh() {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(onPullToRefresh(_:)), for: .valueChanged)
+        tableView.addSubview(control)
+        refreshControl = control
+    }
+    
+    @objc private func onPullToRefresh(_ sender: AnyObject) {
+        reloadListDatas()
+    }
+    
+    private func stopPullToRefresh() {
+        if let controller = refreshControl {
+            if controller.isRefreshing {
+                refreshControl.endRefreshing()
+            }
+        }
     }
 }
 
