@@ -9,7 +9,6 @@
 import UIKit
 import RealmSwift
 import MastodonKit
-import Fuzi
 
 class TimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
@@ -40,7 +39,16 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         reloadListDatas()
     }
     
+    @IBAction func postToot(_ sender: Any) {
+        performSegue(withIdentifier: "moveToot", sender: nil)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moveToot" {
+            let tootView: TootViewController = segue.destination as! TootViewController
+            tootView.user = self.user as Account?
+        }
+    }
     
     @IBAction func changeTL(_ sender: Any) {
         if isHome {
@@ -102,7 +110,9 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.retCount.text = String(data.reblogsCount)
         cell.repCount.text = String(data.mentions.count)
         cell.favCount.text = String(data.favouritesCount)
-        cell.tootContent.text = "<html>" + data.content + "</html>"
+//        cell.tootContent.text = data.content
+        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + data.content + "</b>")
+        cell.tootContent.attributedText = attributedString
         cell.userID.text = "@" + data.account.username
         cell.userName.text = data.account.displayName
         print(data.account.avatar)
@@ -113,18 +123,8 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.isFavorited = data.favourited ?? false
         cell.isRebloged = data.reblogged ?? false
         cell.judge()
-        htmlPerse("<html>" + data.content + "</html>")
         
         return cell
-    }
-    
-    func htmlPerse(_ content: String) {
-        do {
-            let doc = try HTMLDocument(string: content, encoding: String.Encoding.utf8)
-            print(doc)
-        } catch let error{
-            print(error)
-        }
     }
     
     private func initializePullToRefresh() {
@@ -159,3 +159,24 @@ extension UIImageView {
         }.resume()
     }
 }
+
+extension NSAttributedString {
+    static func parseHTML2Text(sourceText text: String) -> NSAttributedString? {
+        let encodeData = text.data(using: String.Encoding.utf8, allowLossyConversion: true)
+        let attributedOptions = [
+            NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html as AnyObject,
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue as AnyObject
+        ]
+        
+        var attributedString: NSAttributedString?
+        if let encodeData = encodeData {
+            do {
+                attributedString = try NSAttributedString(data: encodeData, options: attributedOptions, documentAttributes: nil)
+            } catch _ {
+                
+            }
+        }
+        return attributedString
+    }
+}
+
