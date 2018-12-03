@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="-70.614692653673174"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="VBg-Oh-3ev">
             <objects>
-                <tableViewController id="Ktp-LI-4wi" sceneMemberID="viewController">
+                <tableViewController id="Ktp-LI-4wi" customClass="DetailViewController" customModule="Mastlia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hv3-Py-eSW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,9 @@
                             <outlet property="delegate" destination="Ktp-LI-4wi" id="1H4-DW-XZe"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="detailTable" destination="hv3-Py-eSW" id="d8O-Cr-64B"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG9-YL-haU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
