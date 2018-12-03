@@ -15,6 +15,14 @@
 		524D57A321A83933003FD9B7 /* TootCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524D57A121A83933003FD9B7 /* TootCell.xib */; };
 		524D57A521A8409E003FD9B7 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */; };
 		524D57A721A84A3D003FD9B7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D57A621A84A3D003FD9B7 /* Account.swift */; };
+		525F68C921B5851000E0CA0B /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F68C721B5851000E0CA0B /* DetailCell.swift */; };
+		525F68CA21B5851000E0CA0B /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525F68C821B5851000E0CA0B /* DetailCell.xib */; };
+		525F68CC21B5869800E0CA0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525F68CB21B5869700E0CA0B /* Main.storyboard */; };
+		525F68CE21B586D700E0CA0B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F68CD21B586D700E0CA0B /* DetailViewController.swift */; };
+		525F68D121B5870800E0CA0B /* ActivityCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F68CF21B5870800E0CA0B /* ActivityCountCell.swift */; };
+		525F68D221B5870800E0CA0B /* ActivityCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525F68D021B5870800E0CA0B /* ActivityCountCell.xib */; };
+		525F68D521B5872500E0CA0B /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F68D321B5872500E0CA0B /* ActivityCell.swift */; };
+		525F68D621B5872500E0CA0B /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525F68D421B5872500E0CA0B /* ActivityCell.xib */; };
 		52677A3721B02C90005F6C43 /* timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3621B02C8F005F6C43 /* timeline.png */; };
 		52677A3921B02CBE005F6C43 /* timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3821B02CBE005F6C43 /* timeline@2x.png */; };
 		52677A3B21B02CD3005F6C43 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A3A21B02CD3005F6C43 /* home.png */; };
@@ -33,7 +41,6 @@
 		52677A5521B02DEA005F6C43 /* public@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52677A5421B02DEA005F6C43 /* public@2x.png */; };
 		5273ECD521A63B7C006F95FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD421A63B7C006F95FB /* AppDelegate.swift */; };
 		5273ECD721A63B7C006F95FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD621A63B7C006F95FB /* ViewController.swift */; };
-		5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECD821A63B7C006F95FB /* Main.storyboard */; };
 		5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECDB21A63B7E006F95FB /* Assets.xcassets */; };
 		5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */; };
 		5273ECEA21A63B7E006F95FB /* MastliaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECE921A63B7E006F95FB /* MastliaTests.swift */; };
@@ -72,6 +79,14 @@
 		524D57A121A83933003FD9B7 /* TootCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TootCell.xib; sourceTree = "<group>"; };
 		524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		524D57A621A84A3D003FD9B7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		525F68C721B5851000E0CA0B /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		525F68C821B5851000E0CA0B /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		525F68CB21B5869700E0CA0B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		525F68CD21B586D700E0CA0B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		525F68CF21B5870800E0CA0B /* ActivityCountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCountCell.swift; sourceTree = "<group>"; };
+		525F68D021B5870800E0CA0B /* ActivityCountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCountCell.xib; sourceTree = "<group>"; };
+		525F68D321B5872500E0CA0B /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		525F68D421B5872500E0CA0B /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		52677A3621B02C8F005F6C43 /* timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline.png; sourceTree = "<group>"; };
 		52677A3821B02CBE005F6C43 /* timeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline@2x.png"; sourceTree = "<group>"; };
 		52677A3A21B02CD3005F6C43 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -91,7 +106,6 @@
 		5273ECD121A63B7C006F95FB /* Mastlia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mastlia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5273ECD421A63B7C006F95FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5273ECD621A63B7C006F95FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5273ECD921A63B7C006F95FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5273ECDB21A63B7E006F95FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5273ECDE21A63B7E006F95FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5273ECE021A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +175,10 @@
 				520003C521A7AF10002E90BF /* LoginViewController.swift */,
 				524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */,
 				52E40FCB21B3E46A00592B1F /* TootViewController.swift */,
+				524D57A021A83933003FD9B7 /* TootCell.swift */,
+				525F68CD21B586D700E0CA0B /* DetailViewController.swift */,
+				525F68CF21B5870800E0CA0B /* ActivityCountCell.swift */,
+				525F68D321B5872500E0CA0B /* ActivityCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +186,9 @@
 		524D579D21A7F07F003FD9B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				525F68D421B5872500E0CA0B /* ActivityCell.xib */,
+				525F68D021B5870800E0CA0B /* ActivityCountCell.xib */,
+				525F68C821B5851000E0CA0B /* DetailCell.xib */,
 				528F2E0421B0E74500E03FB9 /* add@2x.png */,
 				528F2E0221B0E73000E03FB9 /* add.png */,
 				52677A5421B02DEA005F6C43 /* public@2x.png */,
@@ -187,7 +208,9 @@
 				52677A3821B02CBE005F6C43 /* timeline@2x.png */,
 				52677A3621B02C8F005F6C43 /* timeline.png */,
 				520003C321A7AC62002E90BF /* login.storyboard */,
-				5273ECD821A63B7C006F95FB /* Main.storyboard */,
+				525F68CB21B5869700E0CA0B /* Main.storyboard */,
+				524D57A121A83933003FD9B7 /* TootCell.xib */,
+				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -226,15 +249,13 @@
 		5273ECD321A63B7C006F95FB /* Mastlia */ = {
 			isa = PBXGroup;
 			children = (
+				525F68C721B5851000E0CA0B /* DetailCell.swift */,
 				52331DC821AED2C20094C4BF /* Controllers */,
 				524D57A821A85E23003FD9B7 /* Models */,
 				524D579D21A7F07F003FD9B7 /* Resources */,
 				5273ECD421A63B7C006F95FB /* AppDelegate.swift */,
 				5273ECDB21A63B7E006F95FB /* Assets.xcassets */,
-				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 				5273ECE021A63B7E006F95FB /* Info.plist */,
-				524D57A021A83933003FD9B7 /* TootCell.swift */,
-				524D57A121A83933003FD9B7 /* TootCell.xib */,
 			);
 			path = Mastlia;
 			sourceTree = "<group>";
@@ -377,8 +398,11 @@
 			files = (
 				52677A5521B02DEA005F6C43 /* public@2x.png in Resources */,
 				52677A4721B02D69005F6C43 /* retweet.png in Resources */,
+				525F68CA21B5851000E0CA0B /* DetailCell.xib in Resources */,
+				525F68CC21B5869800E0CA0B /* Main.storyboard in Resources */,
 				520003C421A7AC62002E90BF /* login.storyboard in Resources */,
 				528F2E0321B0E73200E03FB9 /* add.png in Resources */,
+				525F68D621B5872500E0CA0B /* ActivityCell.xib in Resources */,
 				52677A4F21B02DB1005F6C43 /* star.png in Resources */,
 				528F2E0521B0E74500E03FB9 /* add@2x.png in Resources */,
 				52677A3B21B02CD3005F6C43 /* home.png in Resources */,
@@ -389,6 +413,7 @@
 				52677A3721B02C90005F6C43 /* timeline.png in Resources */,
 				52677A4B21B02D8C005F6C43 /* reply.png in Resources */,
 				52677A4521B02D4B005F6C43 /* person@2x.png in Resources */,
+				525F68D221B5870800E0CA0B /* ActivityCountCell.xib in Resources */,
 				52677A4921B02D78005F6C43 /* retweet@2x.png in Resources */,
 				524D57A321A83933003FD9B7 /* TootCell.xib in Resources */,
 				52677A5121B02DBD005F6C43 /* star@2x.png in Resources */,
@@ -397,7 +422,6 @@
 				5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */,
 				52677A3D21B02CE1005F6C43 /* home@2x.png in Resources */,
 				52677A4D21B02D9D005F6C43 /* reply@2x.png in Resources */,
-				5273ECDA21A63B7C006F95FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,13 +543,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525F68C921B5851000E0CA0B /* DetailCell.swift in Sources */,
 				52E40FCC21B3E46A00592B1F /* TootViewController.swift in Sources */,
+				525F68D121B5870800E0CA0B /* ActivityCountCell.swift in Sources */,
 				520003C621A7AF10002E90BF /* LoginViewController.swift in Sources */,
 				5273ECD721A63B7C006F95FB /* ViewController.swift in Sources */,
 				5273ECD521A63B7C006F95FB /* AppDelegate.swift in Sources */,
 				524D57A521A8409E003FD9B7 /* TimeLineViewController.swift in Sources */,
 				524D57A221A83933003FD9B7 /* TootCell.swift in Sources */,
+				525F68CE21B586D700E0CA0B /* DetailViewController.swift in Sources */,
 				52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */,
+				525F68D521B5872500E0CA0B /* ActivityCell.swift in Sources */,
 				524D57A721A84A3D003FD9B7 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,14 +590,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5273ECD821A63B7C006F95FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5273ECD921A63B7C006F95FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
