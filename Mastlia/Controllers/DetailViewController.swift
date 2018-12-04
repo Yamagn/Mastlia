@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var replys: [Mention] = []
     var catchToot: Status? = nil
     var user: Account = Account()
+    var isCount = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,13 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 3 + replys.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 && !isCount {
+            return 0
+        }
+        return detailTable.rowHeight
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
@@ -67,17 +75,19 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if toot.reblogsCount > 0 {
                 cell.boostCount.text = String(toot.reblogsCount) + "件のブースト"
             } else {
-                cell.boostCount = nil
+                cell.boostCount.text = ""
+                cell.boostCount.isHidden = true
             }
             
             if toot.favouritesCount > 0 {
                 cell.favCount.text = String(toot.favouritesCount) + "件のふぁぼ"
             } else {
-                cell.boostCount = nil
+                cell.favCount.text = ""
             }
             
-            if cell == nil && cell == nil {
+            if cell.boostCount.text! == "" && cell.favCount.text! == "" {
                 cell.isHidden = true
+                isCount = false
             }
             
             return cell

@@ -134,6 +134,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         selectContent = dataList[indexPath.row]
         if selectContent != nil {
             performSegue(withIdentifier: "showDetail", sender: nil)
