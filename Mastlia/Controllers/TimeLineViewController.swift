@@ -19,6 +19,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     var user: Account = Account()
     var dataList: [Status] = []
     var isHome: Bool = true
+    var selectContent: Status? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,11 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         if segue.identifier == "moveToot" {
             let tootView: TootViewController = segue.destination as! TootViewController
             tootView.user = self.user as Account?
+        }
+        
+        if segue.identifier == "showDetail" {
+            let detailView: DetailViewController = segue.destination as! DetailViewController
+            detailView.catchToot = selectContent
         }
     }
     
@@ -125,6 +131,13 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.judge()
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectContent = dataList[indexPath.row]
+        if selectContent != nil {
+            performSegue(withIdentifier: "showDetail", sender: nil)
+        }
     }
     
     private func initializePullToRefresh() {

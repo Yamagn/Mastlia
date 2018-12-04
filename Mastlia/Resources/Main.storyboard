@@ -104,7 +104,7 @@
                         <outlet property="indicator" destination="Mvf-x4-rVX" id="Mcu-MF-YYK"/>
                         <outlet property="tableView" destination="VaT-fT-zxw" id="rjw-sg-eXZ"/>
                         <segue destination="12j-OD-Ozh" kind="presentation" identifier="moveLoginView" id="qPT-VJ-sEg"/>
-                        <segue destination="Ktp-LI-4wi" kind="show" id="SgD-tp-fil"/>
+                        <segue destination="Ktp-LI-4wi" kind="show" identifier="showDetail" id="SgD-tp-fil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FA-Mv-a7M" userLabel="First Responder" sceneMemberID="firstResponder"/>

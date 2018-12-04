@@ -28,6 +28,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         detailTable.register(countNib, forCellReuseIdentifier: "ActivityCountCell")
         detailTable.register(activityNib, forCellReuseIdentifier: "ActivityCell")
         detailTable.register(tootNib, forCellReuseIdentifier: "TootCell")
+        
+        detailTable.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
@@ -54,7 +56,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         case 0:
             let cell: DetailCell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as! DetailCell
             cell.userAvater.setImage(fromUrl: toot.account.avatar)
-            cell.userID.text = toot.account.id
+            cell.userID.text = toot.account.username
             cell.userName.text = toot.account.displayName
             cell.dateTime.text = formatter.string(from: toot.createdAt)
             let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + toot.content + "</b>")
@@ -63,16 +65,21 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         case 1:
             let cell: ActivityCountCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCountCell") as! ActivityCountCell
             if toot.reblogsCount > 0 {
-                cell.boostCount.text = String(toot.reblogsCount)
+                cell.boostCount.text = String(toot.reblogsCount) + "件のブースト"
             } else {
-                cell.boostCount.isHidden = true
+                cell.boostCount = nil
             }
             
             if toot.favouritesCount > 0 {
-                cell.favCount.text = String(toot.favouritesCount)
+                cell.favCount.text = String(toot.favouritesCount) + "件のふぁぼ"
             } else {
-                cell.favCount.isHidden = true
+                cell.boostCount = nil
             }
+            
+            if cell == nil && cell == nil {
+                cell.isHidden = true
+            }
+            
             return cell
         case 2:
             let cell: ActivityCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell") as! ActivityCell
@@ -81,6 +88,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         default:
             let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
             
+            if replys.isEmpty {
+                cell.isHidden = true
+                return cell
+            }
+
             let data = replys[indexPath.row - 3]
             print(data)
 //            cell.retCount.text = String(data.reblogsCount)
@@ -99,7 +111,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //            cell.isFavorited = data.favourited ?? false
 //            cell.isRebloged = data.reblogged ?? false
 //            cell.judge()
-            
             return cell
         }
     }
