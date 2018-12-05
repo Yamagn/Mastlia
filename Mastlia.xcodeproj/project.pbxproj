@@ -47,6 +47,8 @@
 		5273ECF521A63B7E006F95FB /* MastliaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECF421A63B7E006F95FB /* MastliaUITests.swift */; };
 		528F2E0321B0E73200E03FB9 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 528F2E0221B0E73000E03FB9 /* add.png */; };
 		528F2E0521B0E74500E03FB9 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 528F2E0421B0E74500E03FB9 /* add@2x.png */; };
+		529248EE21B759220055F906 /* ReblogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529248EC21B759220055F906 /* ReblogCell.swift */; };
+		529248EF21B759220055F906 /* ReblogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529248ED21B759220055F906 /* ReblogCell.xib */; };
 		52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8329321AA9FBB008F41F5 /* Toots.swift */; };
 		52E40FCC21B3E46A00592B1F /* TootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E40FCB21B3E46A00592B1F /* TootViewController.swift */; };
 		D470662BEE15CB538ED57043 /* Pods_Mastlia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEADFAC15B2B0CAFE56B9F /* Pods_Mastlia.framework */; };
@@ -117,6 +119,8 @@
 		5273ECF621A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528F2E0221B0E73000E03FB9 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		528F2E0421B0E74500E03FB9 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		529248EC21B759220055F906 /* ReblogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReblogCell.swift; sourceTree = "<group>"; };
+		529248ED21B759220055F906 /* ReblogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReblogCell.xib; sourceTree = "<group>"; };
 		52A8329321AA9FBB008F41F5 /* Toots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toots.swift; sourceTree = "<group>"; };
 		52E40FCB21B3E46A00592B1F /* TootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TootViewController.swift; sourceTree = "<group>"; };
 		563C230A5C2117B55B08B7D7 /* Pods-Mastlia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastlia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				525F68CD21B586D700E0CA0B /* DetailViewController.swift */,
 				525F68CF21B5870800E0CA0B /* ActivityCountCell.swift */,
 				525F68D321B5872500E0CA0B /* ActivityCell.swift */,
+				529248EC21B759220055F906 /* ReblogCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				525F68CB21B5869700E0CA0B /* Main.storyboard */,
 				524D57A121A83933003FD9B7 /* TootCell.xib */,
 				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
+				529248ED21B759220055F906 /* ReblogCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				528F2E0321B0E73200E03FB9 /* add.png in Resources */,
 				525F68D621B5872500E0CA0B /* ActivityCell.xib in Resources */,
 				52677A4F21B02DB1005F6C43 /* star.png in Resources */,
+				529248EF21B759220055F906 /* ReblogCell.xib in Resources */,
 				528F2E0521B0E74500E03FB9 /* add@2x.png in Resources */,
 				52677A3B21B02CD3005F6C43 /* home.png in Resources */,
 				52677A3921B02CBE005F6C43 /* timeline@2x.png in Resources */,
@@ -554,6 +561,7 @@
 				525F68CE21B586D700E0CA0B /* DetailViewController.swift in Sources */,
 				52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */,
 				525F68D521B5872500E0CA0B /* ActivityCell.swift in Sources */,
+				529248EE21B759220055F906 /* ReblogCell.swift in Sources */,
 				524D57A721A84A3D003FD9B7 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

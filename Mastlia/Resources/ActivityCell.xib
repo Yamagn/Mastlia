@@ -19,42 +19,44 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="x1a-cZ-jZC">
-                        <rect key="frame" x="31" y="3" width="258" height="36"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfC-xF-LUe">
-                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                <state key="normal" image="reply.png"/>
-                                <connections>
-                                    <action selector="onReplyTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="p4G-Zn-3RX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="755-eF-Z69">
-                                <rect key="frame" x="111" y="0.0" width="36" height="36"/>
-                                <state key="normal" image="retweet.png"/>
-                                <connections>
-                                    <action selector="onBoostTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nJT-ls-d8O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-Ai-Ctp">
-                                <rect key="frame" x="222" y="0.0" width="36" height="36"/>
-                                <state key="normal" image="star.png"/>
-                                <connections>
-                                    <action selector="onStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hFk-gk-Uyj"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="755-eF-Z69">
+                        <rect key="frame" x="142" y="3" width="36" height="36"/>
+                        <state key="normal" image="retweet.png"/>
+                        <connections>
+                            <action selector="onBoostTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nJT-ls-d8O"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-Ai-Ctp">
+                        <rect key="frame" x="234" y="3" width="36" height="36"/>
+                        <state key="normal" image="star.png"/>
+                        <connections>
+                            <action selector="onStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hFk-gk-Uyj"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfC-xF-LUe">
+                        <rect key="frame" x="50" y="3" width="36" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" image="reply.png"/>
+                        <connections>
+                            <action selector="onReplyTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="p4G-Zn-3RX"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="x1a-cZ-jZC" secondAttribute="bottom" constant="4.5" id="3ig-W4-SId"/>
-                    <constraint firstItem="x1a-cZ-jZC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="31" id="UE0-o6-TD2"/>
-                    <constraint firstAttribute="trailing" secondItem="x1a-cZ-jZC" secondAttribute="trailing" constant="31" id="ZYT-8Z-WRv"/>
-                    <constraint firstItem="x1a-cZ-jZC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="rJZ-Pn-AMJ"/>
+                    <constraint firstItem="Wbh-Ai-Ctp" firstAttribute="leading" secondItem="755-eF-Z69" secondAttribute="trailing" constant="56" id="C5T-cf-QJP"/>
+                    <constraint firstItem="755-eF-Z69" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Hr6-hd-GvN"/>
+                    <constraint firstAttribute="bottom" secondItem="755-eF-Z69" secondAttribute="bottom" constant="4.5" id="JSs-hd-G18"/>
+                    <constraint firstItem="755-eF-Z69" firstAttribute="leading" secondItem="rfC-xF-LUe" secondAttribute="trailing" constant="56" id="OSW-eA-Rag"/>
+                    <constraint firstAttribute="trailing" secondItem="Wbh-Ai-Ctp" secondAttribute="trailing" constant="50" id="Pp8-wr-8Jv"/>
+                    <constraint firstItem="rfC-xF-LUe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="QPH-gJ-Wlj"/>
+                    <constraint firstAttribute="bottom" secondItem="rfC-xF-LUe" secondAttribute="bottom" constant="4.5" id="SA8-ly-wdc"/>
+                    <constraint firstItem="Wbh-Ai-Ctp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Uco-h5-dtC"/>
+                    <constraint firstAttribute="bottom" secondItem="Wbh-Ai-Ctp" secondAttribute="bottom" constant="4.5" id="iug-oE-pHE"/>
+                    <constraint firstItem="rfC-xF-LUe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="nzC-A0-bNH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+            <point key="canvasLocation" x="115" y="176"/>
         </tableViewCell>
     </objects>
     <resources>

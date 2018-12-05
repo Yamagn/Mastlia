@@ -40,7 +40,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3 + replys.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -64,7 +64,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         case 0:
             let cell: DetailCell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as! DetailCell
             cell.userAvater.setImage(fromUrl: toot.account.avatar)
-            cell.userID.text = toot.account.username
+            cell.userID.text = "@" + toot.account.username
             cell.userName.text = toot.account.displayName
             cell.dateTime.text = formatter.string(from: toot.createdAt)
             let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + toot.content + "</b>")

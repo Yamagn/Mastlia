@@ -36,7 +36,8 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
 
         let tootNib = UINib(nibName: "TootCell", bundle: nil)
         tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
-        
+        let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
+        tableView.register(reblogNib, forCellReuseIdentifier: "ReblogCell")
         reloadListDatas()
     }
     
@@ -110,27 +111,51 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
         let data = dataList[indexPath.row]
         print(data)
-        cell.retCount.text = String(data.reblogsCount)
-        cell.repCount.text = String(data.mentions.count)
-        cell.favCount.text = String(data.favouritesCount)
-//        cell.tootContent.text = data.content
-        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + data.content + "</b>")
+        guard let reblog = data.reblog else {
+            let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
+            cell.retCount.text = String(data.reblogsCount)
+            cell.repCount.text = String(data.mentions.count)
+            cell.favCount.text = String(data.favouritesCount)
+            //        cell.tootContent.text = data.content
+            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + data.content + "</b>")
+            cell.tootContent.attributedText = attributedString
+            cell.userID.text = "@" + data.account.username
+            cell.userName.text = data.account.displayName
+            print(data.account.avatar)
+            cell.userImage.setImage(fromUrl: data.account.avatar)
+            cell.id = data.id
+            cell.user.domain = self.user.domain
+            cell.user.accessToken = self.user.accessToken
+            cell.isFavorited = data.favourited ?? false
+            cell.isRebloged = data.reblogged ?? false
+            cell.judge()
+            
+            return cell
+        }
+        let cell: ReblogCell = tableView.dequeueReusableCell(withIdentifier: "ReblogCell", for: indexPath) as! ReblogCell
+        
+        cell.reblogedUser.text = data.account.username + "さんがブーストしました"
+        cell.retCount.text = String(reblog.reblogsCount)
+        cell.repCount.text = String(reblog.mentions.count)
+        cell.favCount.text = String(reblog.favouritesCount)
+        //        cell.tootContent.text = data.content
+        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + reblog.content + "</b>")
         cell.tootContent.attributedText = attributedString
-        cell.userID.text = "@" + data.account.username
-        cell.userName.text = data.account.displayName
-        print(data.account.avatar)
-        cell.userImage.setImage(fromUrl: data.account.avatar)
-        cell.id = data.id
+        cell.userID.text = "@" + reblog.account.username
+        cell.userName.text = reblog.account.displayName
+        print(reblog.account.avatar)
+        cell.userImage.setImage(fromUrl: reblog.account.avatar)
+        cell.id = reblog.id
         cell.user.domain = self.user.domain
         cell.user.accessToken = self.user.accessToken
-        cell.isFavorited = data.favourited ?? false
-        cell.isRebloged = data.reblogged ?? false
+        cell.isFavorited = reblog.favourited ?? false
+        cell.isRebloged = reblog.reblogged ?? false
         cell.judge()
         
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

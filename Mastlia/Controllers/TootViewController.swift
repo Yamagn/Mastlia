@@ -11,14 +11,17 @@ import MastodonKit
 import RealmSwift
 
 class TootViewController: UIViewController {
-    @IBOutlet weak var tootField: UITextField!
+    @IBOutlet weak var tootField: UITextView!
+    
     var user: Account?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tootField.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func backPage(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
