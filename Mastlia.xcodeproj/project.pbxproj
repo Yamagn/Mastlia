@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07690AF321D4C5850049FE58 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07690AF221D4C5850049FE58 /* UserViewController.swift */; };
 		2BEFF2054FA5D91B485FEB9D /* Pods_MastliaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40493F5860D6B39D0342D33C /* Pods_MastliaUITests.framework */; };
 		5121E352D3A8D621FA8AC4AE /* Pods_MastliaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EA6D0B308FCDE7F5E57A87 /* Pods_MastliaTests.framework */; };
 		520003C421A7AC62002E90BF /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520003C321A7AC62002E90BF /* login.storyboard */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07690AF221D4C5850049FE58 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		1D840151FF9AF9D30C423E5B /* Pods-MastliaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MastliaUITests/Pods-MastliaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E249CFF2E61160EFB452ACF /* Pods-MastliaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MastliaTests/Pods-MastliaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		40493F5860D6B39D0342D33C /* Pods_MastliaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MastliaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 				529248EC21B759220055F906 /* ReblogCell.swift */,
 				5279783921B77AF300B95775 /* NotificationViewController.swift */,
 				5279783D21B77C3D00B95775 /* NotificationCell.swift */,
+				07690AF221D4C5850049FE58 /* UserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525F68C921B5851000E0CA0B /* DetailCell.swift in Sources */,
+				07690AF321D4C5850049FE58 /* UserViewController.swift in Sources */,
 				52E40FCC21B3E46A00592B1F /* TootViewController.swift in Sources */,
 				525F68D121B5870800E0CA0B /* ActivityCountCell.swift in Sources */,
 				520003C621A7AF10002E90BF /* LoginViewController.swift in Sources */,
