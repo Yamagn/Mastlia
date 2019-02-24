@@ -28,12 +28,11 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         let realm = try! Realm()
 
         let users = realm.objects(Account.self)
-        user = users[0]
-        if users.count == 0 {
+        if users.isEmpty {
             performSegue(withIdentifier: "moveLoginView", sender: nil)
             return
         }
-
+        user = users[0]
         let tootNib = UINib(nibName: "TootCell", bundle: nil)
         tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
         let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
@@ -111,6 +110,12 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if dataList.isEmpty {
+            let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(controller, animated: true, completion: nil)
+            return UITableViewCell()
+        }
         let data = dataList[indexPath.row]
         print(data)
         guard let reblog = data.reblog else {
