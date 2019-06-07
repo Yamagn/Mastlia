@@ -18,7 +18,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var followCount: UIButton!
     @IBOutlet weak var followersCount: UIButton!
     @IBOutlet weak var note: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var followButton: UIButton!
     
     var user = Account()
     var dataList: [Status] = []
@@ -82,10 +82,10 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tootNib = UINib(nibName: "TootCell", bundle: nil)
-        tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
-        let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
-        tableView.register(reblogNib, forCellReuseIdentifier: "ReblogCell")
+//        let tootNib = UINib(nibName: "TootCell", bundle: nil)
+//        tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
+//        let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
+//        tableView.register(reblogNib, forCellReuseIdentifier: "ReblogCell")
         
         let realm = try! Realm()
         let users = realm.objects(Account.self)
@@ -107,21 +107,21 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
                     let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
                     self.note.attributedText = attributedString
-                    let statusesReq = Accounts.statuses(id: account.id)
-                    client.run(statusesReq) { result in
-                        print(result)
-                        if let statuses = result.value {
-                            self.dataList = statuses
-                        } else {
-                            DispatchQueue.main.async {
-                                let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
-                                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                                self.present(controller, animated: true, completion: nil)
-                                return
-                            }
-                        }
-                    }
-                    self.tableView.reloadData()
+//                    let statusesReq = Accounts.statuses(id: account.id)
+//                    client.run(statusesReq) { result in
+//                        print(result)
+//                        if let statuses = result.value {
+//                            self.dataList = statuses
+//                        } else {
+//                            DispatchQueue.main.async {
+//                                let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
+//                                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//                                self.present(controller, animated: true, completion: nil)
+//                                return
+//                            }
+//                        }
+//                    }
+//                    self.tableView.reloadData()
                 }
             } else {
                 let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
@@ -133,24 +133,24 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
     
-    func refreshTL() {
-        print(id)
-        var client = Client(baseURL: "https://" + user.domain)
-        client.accessToken = user.accessToken
-        let statusesReq = Accounts.statuses(id: id)
-        client.run(statusesReq) { result in
-            print(result)
-            if let statuses = result.value {
-                self.dataList = statuses
-            } else {
-                let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                return
-            }
-        }
-        tableView.reloadData()
-    }
+//    func refreshTL() {
+//        print(id)
+//        var client = Client(baseURL: "https://" + user.domain)
+//        client.accessToken = user.accessToken
+//        let statusesReq = Accounts.statuses(id: id)
+//        client.run(statusesReq) { result in
+//            print(result)
+//            if let statuses = result.value {
+//                self.dataList = statuses
+//            } else {
+//                let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
+//                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//                self.present(controller, animated: true, completion: nil)
+//                return
+//            }
+//        }
+//        tableView.reloadData()
+//    }
     
     @IBAction func moveFollowList(_ sender: Any) {
         // TODO: -
@@ -158,5 +158,9 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func moveFollwerList(_ sender: Any) {
         // TODO: -
+    }
+    @IBAction func viewTweets(_ sender: Any) {
+    }
+    @IBAction func followUser(_ sender: Any) {
     }
 }
