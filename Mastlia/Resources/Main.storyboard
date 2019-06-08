@@ -39,6 +39,7 @@
                     <navigationItem key="navigationItem" title="通知" id="dIu-RL-7lo"/>
                     <connections>
                         <outlet property="tableView" destination="XTI-HE-hLo" id="IPp-fI-5OC"/>
+                        <segue destination="kzM-I2-B7a" kind="show" identifier="showUserInfo" id="0Pw-d7-BS1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -268,6 +269,7 @@
                                 <connections>
                                     <action selector="moveFollwerList:" destination="kzM-I2-B7a" eventType="touchUpInside" id="OHb-0K-NoA"/>
                                     <action selector="viewTweets:" destination="kzM-I2-B7a" eventType="touchUpInside" id="hkl-cB-9Qj"/>
+                                    <segue destination="aiA-io-KNM" kind="show" identifier="viewStatusesSegue" id="bRd-tQ-7lZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -316,6 +318,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xD3-p9-7a8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1904.8" y="1450.5247376311845"/>
+        </scene>
+        <!--User Statuses View Controller-->
+        <scene sceneID="PBl-4L-ytq">
+            <objects>
+                <viewController id="aiA-io-KNM" customClass="UserStatusesViewController" customModule="Mastlia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WRd-gM-Z0F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lra-Je-SER">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aiA-io-KNM" id="bBG-uC-HcU"/>
+                                    <outlet property="delegate" destination="aiA-io-KNM" id="7tA-Qa-I9L"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lra-Je-SER" firstAttribute="top" secondItem="MZk-cT-uQf" secondAttribute="top" id="99q-dN-fzu"/>
+                            <constraint firstItem="MZk-cT-uQf" firstAttribute="bottom" secondItem="lra-Je-SER" secondAttribute="bottom" id="aZk-QD-Xnh"/>
+                            <constraint firstItem="lra-Je-SER" firstAttribute="leading" secondItem="MZk-cT-uQf" secondAttribute="leading" id="c4h-eh-cBb"/>
+                            <constraint firstItem="MZk-cT-uQf" firstAttribute="trailing" secondItem="lra-Je-SER" secondAttribute="trailing" id="oJO-TW-9k6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MZk-cT-uQf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N9q-1y-Ajp"/>
+                    <connections>
+                        <outlet property="tableView" destination="lra-Je-SER" id="yLM-30-xMz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4H-Mc-03a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3031" y="1451"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ThI-fX-uRs">
@@ -438,4 +475,7 @@
         <image name="public.png" width="36" height="36"/>
         <image name="timeline.png" width="36" height="36"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Pw-d7-BS1"/>
+    </inferredMetricsTieBreakers>
 </document>
