@@ -21,8 +21,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var followButton: UIButton!
     
     var account: MastodonKit.Account?
-    var id: String = ""
-    
+    var current: MastodonKit.Account?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +30,18 @@ class UserViewController: UIViewController {
         let infoReq = Accounts.currentUser()
         var client = Client(baseURL: "https://" + user.domain)
         client.accessToken = user.accessToken
-        
         if self.account == nil {
             client.run(infoReq) { result in
-                if let account = result.value {
+                if let current = result.value {
+                    self.current = current
+                    self.account = current
+                    guard let account = self.current else {
+                        let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
+                        controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        self.present(controller, animated: true, completion: nil)
+                        return
+                    }
                     DispatchQueue.main.async {
-                        self.account = account
-                        self.id = account.id
                         self.avater.setImage(fromUrl: account.avatar)
                         self.headerImage.setImage(fromUrl: account.header)
                         self.userName.text = account.displayName
@@ -47,31 +51,49 @@ class UserViewController: UIViewController {
                         let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
                         self.note.attributedText = attributedString
                     }
-                } else {
-                    let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
-                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(controller, animated: true, completion: nil)
-                    return
                 }
             }
         } else {
-            guard let account = self.account else {
-                let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                return
+            client.run(infoReq) { result in
+                if let current = result.value {
+                    self.current = current
+                    guard let account = self.account else {
+                        let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
+                        controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        self.present(controller, animated: true, completion: nil)
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.avater.setImage(fromUrl: account.avatar)
+                        self.headerImage.setImage(fromUrl: account.header)
+                        self.userName.text = account.displayName
+                        self.screenName.text = "@" + account.username
+                        self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
+                        self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
+                        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
+                        self.note.attributedText = attributedString
+                    }
+                }
             }
-            self.id = account.id
-            self.avater.setImage(fromUrl: account.avatar)
-            self.headerImage.setImage(fromUrl: account.header)
-            self.userName.text = account.displayName
-            self.screenName.text = "@" + account.username
-            self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
-            self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
-            self.note.attributedText = attributedString
         }
-        // Do any additional setup after loading the view.
+        if self.account?.id == self.current?.id {
+            followButton.setTitle("設定", for: .normal)
+            followButton.backgroundColor = UIColor.gray
+        } else {
+            let relationshipReq = Accounts.relationships(ids: [self.account!.id])
+            client.run(relationshipReq) { result in
+                if let relation = result.value {
+                    if relation.first!.following {
+                        DispatchQueue.main.async {
+                            self.followButton.setTitle("フォローを外す", for: .normal)
+                            self.followButton.backgroundColor = UIColor.red
+                            self.followButton.setTitleColor(.white, for: .normal)
+                        }
+                    }
+                }
+            }
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -92,5 +114,33 @@ class UserViewController: UIViewController {
     @IBAction func viewTweets(_ sender: Any) {
     }
     @IBAction func followUser(_ sender: Any) {
+        let realm = try! Realm()
+        let user = realm.objects(Account.self).first!
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        if followButton.currentTitle == "フォローする" {
+            let followReq = Accounts.follow(id: account!.id)
+            client.run(followReq) { result in
+                if let err = result.error {
+                    let controller = UIAlertController(title: nil, message: "フォローに失敗しました", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    return
+                }
+            }
+        }
+        if followButton.currentTitle == "フォローを外す" {
+            let unfollowReq = Accounts.unfollow(id: account!.id)
+            client.run(unfollowReq) { result in
+                if let err = result.error {
+                    let controller = UIAlertController(title: nil, message: "操作に失敗しました", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    return
+                }
+            }
+        } else {
+            
+        }
     }
 }

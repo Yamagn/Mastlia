@@ -21,9 +21,7 @@ class UserStatusesViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try! Realm()
-        user = realm.objects(Account.self).first!
-        let client = Client(baseURL: "https://" + user.domain)
-        
+        user = realm.objects(Account.self).first!        
         guard let account = param else {
             let controller = UIAlertController(title: nil, message: "投稿を取得できませんでした", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
