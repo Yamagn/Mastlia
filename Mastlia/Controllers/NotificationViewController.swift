@@ -14,6 +14,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     var dataList: [MastodonKit.Notification] = []
     var user: Account = Account()
+    var selectContent: MastodonKit.Notification?
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -34,6 +35,23 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         cell.judge(type: data.type, UserName: data.account.username)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showUserInfo" {
+            let userInfoController: UserViewController = segue.destination as! UserViewController
+            userInfoController.account = self.selectContent?.account
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectContent = dataList[indexPath.row]
+        if selectContent != nil {
+            if selectContent?.type == NotificationType.follow {
+                performSegue(withIdentifier: "showUserInfo", sender: nil)
+            }
+        }
     }
     
     func reloadListDatas() {
