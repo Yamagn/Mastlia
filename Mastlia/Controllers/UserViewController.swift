@@ -10,7 +10,7 @@ import UIKit
 import MastodonKit
 import RealmSwift
 
-class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserViewController: UIViewController {
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var avater: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -18,145 +18,162 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var followCount: UIButton!
     @IBOutlet weak var followersCount: UIButton!
     @IBOutlet weak var note: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var followButton: UIButton!
     
-    var user = Account()
-    var dataList: [Status] = []
-    var id: String = ""
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataList.count
-    }
+    var account: MastodonKit.Account?
+    var current: MastodonKit.Account?
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var data = dataList[indexPath.row]
-        print(data)
-        guard let reblog = data.reblog else {
-            let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
-            cell.retCount.text = String(data.reblogsCount)
-            cell.repCount.text = String(data.mentions.count)
-            cell.favCount.text = String(data.favouritesCount)
-            //        cell.tootContent.text = data.content
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + data.content + "</b>")
-            cell.tootContent.attributedText = attributedString
-            cell.userID.text = "@" + data.account.username
-            cell.userName.text = data.account.displayName
-            print(data.account.avatar)
-            cell.userImage.setImage(fromUrl: data.account.avatar)
-            cell.id = data.id
-            cell.user.domain = self.user.domain
-            cell.user.accessToken = self.user.accessToken
-            cell.isFavorited = data.favourited ?? false
-            cell.isRebloged = data.reblogged ?? false
-            cell.judge()
-            
-            return cell
-        }
-        let cell: ReblogCell = tableView.dequeueReusableCell(withIdentifier: "ReblogCell", for: indexPath) as! ReblogCell
-        
-        cell.reblogedUser.text = data.account.username + "さんがブーストしました"
-        cell.retCount.text = String(reblog.reblogsCount)
-        cell.repCount.text = String(reblog.mentions.count)
-        cell.favCount.text = String(reblog.favouritesCount)
-        //        cell.tootContent.text = data.content
-        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + reblog.content + "</b>")
-        cell.tootContent.attributedText = attributedString
-        cell.userID.text = "@" + reblog.account.username
-        cell.userName.text = reblog.account.displayName
-        print(reblog.account.avatar)
-        cell.userImage.setImage(fromUrl: reblog.account.avatar)
-        cell.id = reblog.id
-        cell.user.domain = self.user.domain
-        cell.user.accessToken = self.user.accessToken
-        cell.isFavorited = reblog.favourited ?? false
-        cell.isRebloged = reblog.reblogged ?? false
-        cell.judge()
-        
-        return cell
-    }
-    
+    var userlist: [MastodonKit.Account] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tootNib = UINib(nibName: "TootCell", bundle: nil)
-        tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
-        let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
-        tableView.register(reblogNib, forCellReuseIdentifier: "ReblogCell")
-        
         let realm = try! Realm()
-        let users = realm.objects(Account.self)
-        user = users[0]
-        
+        let user = realm.objects(Account.self).first!
         let infoReq = Accounts.currentUser()
         var client = Client(baseURL: "https://" + user.domain)
         client.accessToken = user.accessToken
-        
-        client.run(infoReq) { result in
-            if let account = result.value {
-                DispatchQueue.main.async {
-                    self.id = account.id
-                    self.avater.setImage(fromUrl: account.avatar)
-                    self.headerImage.setImage(fromUrl: account.header)
-                    self.userName.text = account.displayName
-                    self.screenName.text = "@" + account.username
-                    self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
-                    self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
-                    let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
-                    self.note.attributedText = attributedString
-                    let statusesReq = Accounts.statuses(id: account.id)
-                    client.run(statusesReq) { result in
-                        print(result)
-                        if let statuses = result.value {
-                            self.dataList = statuses
-                        } else {
-                            DispatchQueue.main.async {
-                                let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
-                                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                                self.present(controller, animated: true, completion: nil)
-                                return
-                            }
+        if self.account == nil {
+            client.run(infoReq) { result in
+                if let current = result.value {
+                    self.current = current
+                    self.account = current
+                    guard let account = self.current else {
+                        let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
+                        controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        self.present(controller, animated: true, completion: nil)
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.avater.setImage(fromUrl: account.avatar)
+                        self.headerImage.setImage(fromUrl: account.header)
+                        self.userName.text = account.displayName
+                        self.screenName.text = "@" + account.username
+                        self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
+                        self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
+                        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
+                        self.note.attributedText = attributedString
+                    }
+                }
+            }
+        } else {
+            client.run(infoReq) { result in
+                if let current = result.value {
+                    self.current = current
+                    guard let account = self.account else {
+                        let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
+                        controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        self.present(controller, animated: true, completion: nil)
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.avater.setImage(fromUrl: account.avatar)
+                        self.headerImage.setImage(fromUrl: account.header)
+                        self.userName.text = account.displayName
+                        self.screenName.text = "@" + account.username
+                        self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
+                        self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
+                        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
+                        self.note.attributedText = attributedString
+                    }
+                }
+            }
+        }
+        if self.account?.id == self.current?.id {
+            followButton.setTitle("設定", for: .normal)
+            followButton.backgroundColor = UIColor.gray
+        } else {
+            let relationshipReq = Accounts.relationships(ids: [self.account!.id])
+            client.run(relationshipReq) { result in
+                if let relation = result.value {
+                    if relation.first!.following {
+                        DispatchQueue.main.async {
+                            self.followButton.setTitle("フォローを外す", for: .normal)
+                            self.followButton.backgroundColor = UIColor.red
+                            self.followButton.setTitleColor(.white, for: .normal)
                         }
                     }
-                    self.tableView.reloadData()
                 }
-            } else {
-                let controller = UIAlertController(title: nil, message: "情報を取得できませんでした", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                return
             }
         }
-        // Do any additional setup after loading the view.
+        
     }
     
-    func refreshTL() {
-        print(id)
-        var client = Client(baseURL: "https://" + user.domain)
-        client.accessToken = user.accessToken
-        let statusesReq = Accounts.statuses(id: id)
-        client.run(statusesReq) { result in
-            print(result)
-            if let statuses = result.value {
-                self.dataList = statuses
-            } else {
-                let controller = UIAlertController(title: nil, message: "タイムラインを取得できませんでした", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                return
-            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showStatuses" {
+            let userStatusesView: UserStatusesViewController = segue.destination as! UserStatusesViewController
+            userStatusesView.param = self.account
+        } else if segue.identifier == "showUserList" {
+            let userListView: UserListViewController = segue.destination as! UserListViewController
+            userListView.accounts = userlist
         }
-        tableView.reloadData()
     }
+    
     
     @IBAction func moveFollowList(_ sender: Any) {
-        // TODO: -
+        let realm = try! Realm()
+        let user = realm.objects(Account.self).first!
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        if let acc = self.account {
+            let fllowingReq = Accounts.following(id: acc.id, range: .default)
+            client.run(fllowingReq) { result in
+                if let list = result.value {
+                    self.userlist = list
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "showUserList", sender: nil)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func moveFollwerList(_ sender: Any) {
-        // TODO: -
+        let realm = try! Realm()
+        let user = realm.objects(Account.self).first!
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        if let acc = self.account {
+            let fllowerReq = Accounts.followers(id: acc.id, range: .default)
+            client.run(fllowerReq) { result in
+                if let list = result.value {
+                    self.userlist = list
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "showUserList", sender: nil)
+                    }
+                }
+            }
+        }
+    }
+    @IBAction func viewTweets(_ sender: Any) {
+    }
+    @IBAction func followUser(_ sender: Any) {
+        let realm = try! Realm()
+        let user = realm.objects(Account.self).first!
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        if followButton.currentTitle == "フォローする" {
+            let followReq = Accounts.follow(id: account!.id)
+            client.run(followReq) { result in
+                if result.error != nil {
+                    let controller = UIAlertController(title: nil, message: "フォローに失敗しました", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    return
+                }
+            }
+        }
+        if followButton.currentTitle == "フォローを外す" {
+            let unfollowReq = Accounts.unfollow(id: account!.id)
+            client.run(unfollowReq) { result in
+                if result.error != nil {
+                    let controller = UIAlertController(title: nil, message: "操作に失敗しました", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                    return
+                }
+            }
+        } else {
+            
+        }
     }
 }
