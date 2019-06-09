@@ -22,6 +22,8 @@ class UserViewController: UIViewController {
     
     var account: MastodonKit.Account?
     var current: MastodonKit.Account?
+    
+    var userlist: [MastodonKit.Account] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,19 +99,50 @@ class UserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "viewStatusesSegue" {
+        if segue.identifier == "showStatuses" {
             let userStatusesView: UserStatusesViewController = segue.destination as! UserStatusesViewController
             userStatusesView.param = self.account
+        } else if segue.identifier == "showUserList" {
+            let userListView: UserListViewController = segue.destination as! UserListViewController
+            userListView.accounts = userlist
         }
     }
     
     
     @IBAction func moveFollowList(_ sender: Any) {
-        // TODO: -
+        let realm = try! Realm()
+        let user = realm.objects(Account.self).first!
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        if let acc = self.account {
+            let fllowingReq = Accounts.following(id: acc.id, range: .default)
+            client.run(fllowingReq) { result in
+                if let list = result.value {
+                    self.userlist = list
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "showUserList", sender: nil)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func moveFollwerList(_ sender: Any) {
-        // TODO: -
+        let realm = try! Realm()
+        let user = realm.objects(Account.self).first!
+        var client = Client(baseURL: "https://" + user.domain)
+        client.accessToken = user.accessToken
+        if let acc = self.account {
+            let fllowerReq = Accounts.followers(id: acc.id, range: .default)
+            client.run(fllowerReq) { result in
+                if let list = result.value {
+                    self.userlist = list
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "showUserList", sender: nil)
+                    }
+                }
+            }
+        }
     }
     @IBAction func viewTweets(_ sender: Any) {
     }
@@ -121,7 +154,7 @@ class UserViewController: UIViewController {
         if followButton.currentTitle == "フォローする" {
             let followReq = Accounts.follow(id: account!.id)
             client.run(followReq) { result in
-                if let err = result.error {
+                if result.error != nil {
                     let controller = UIAlertController(title: nil, message: "フォローに失敗しました", preferredStyle: .alert)
                     controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     self.present(controller, animated: true, completion: nil)
@@ -132,7 +165,7 @@ class UserViewController: UIViewController {
         if followButton.currentTitle == "フォローを外す" {
             let unfollowReq = Accounts.unfollow(id: account!.id)
             client.run(unfollowReq) { result in
-                if let err = result.error {
+                if result.error != nil {
                     let controller = UIAlertController(title: nil, message: "操作に失敗しました", preferredStyle: .alert)
                     controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     self.present(controller, animated: true, completion: nil)
