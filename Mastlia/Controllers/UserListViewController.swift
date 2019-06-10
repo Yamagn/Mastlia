@@ -53,5 +53,4 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.register(userNib, forCellReuseIdentifier: "UserListCell")
         tableView.reloadData()
     }
-
 }

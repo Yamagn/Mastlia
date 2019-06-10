@@ -15,6 +15,8 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     var dataList: [MastodonKit.Notification] = []
     var user: Account = Account()
     var selectContent: MastodonKit.Notification?
+    private weak var refreshControl: UIRefreshControl!
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -72,6 +74,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
                 return
             }
         }
+        stopPullToRefresh()
     }
     
 
@@ -90,8 +93,27 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         let tootNib = UINib(nibName: "TootCell", bundle: nil)
         tableView.register(notifyNib, forCellReuseIdentifier: "NotificationCell")
         tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
-        
+        initializePullToRefresh()
         reloadListDatas()
+    }
+    
+    private func initializePullToRefresh() {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(onPullToRefresh(_:)), for: .valueChanged)
+        tableView.addSubview(control)
+        refreshControl = control
+    }
+    
+    @objc private func onPullToRefresh(_ sender: AnyObject) {
+        reloadListDatas()
+    }
+    
+    private func stopPullToRefresh() {
+        if let controller = refreshControl {
+            if controller.isRefreshing {
+                refreshControl.endRefreshing()
+            }
+        }
     }
 
 }

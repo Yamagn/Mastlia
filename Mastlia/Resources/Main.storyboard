@@ -505,7 +505,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add.png" width="36" height="36"/>
+        <image name="add.png" width="14.811429023742676" height="14.811429023742676"/>
         <image name="notify.png" width="36" height="36"/>
         <image name="person.png" width="36" height="36"/>
         <image name="public.png" width="36" height="36"/>
