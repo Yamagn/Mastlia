@@ -28,7 +28,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.avater.setImage(fromUrl: account.avatar)
         cell.screenName.text = account.displayName
         cell.userName.text = "@" + account.username
-        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" +  account.note + "</b>")
+        let attributedString = account.note.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
         cell.note.attributedText = attributedString
         return cell
     }

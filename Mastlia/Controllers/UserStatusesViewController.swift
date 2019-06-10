@@ -53,8 +53,7 @@ class UserStatusesViewController: UIViewController, UITableViewDelegate, UITable
             cell.retCount.text = String(data.reblogsCount)
             cell.repCount.text = String(data.mentions.count)
             cell.favCount.text = String(data.favouritesCount)
-            //        cell.tootContent.text = data.content
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + data.content + "</b>")
+            let attributedString = data.content.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
             cell.tootContent.attributedText = attributedString
             cell.userID.text = "@" + data.account.username
             cell.userName.text = data.account.displayName
@@ -75,7 +74,7 @@ class UserStatusesViewController: UIViewController, UITableViewDelegate, UITable
         cell.retCount.text = String(reblog.reblogsCount)
         cell.repCount.text = String(reblog.mentions.count)
         cell.favCount.text = String(reblog.favouritesCount)
-        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + reblog.content + "</b>")
+        let attributedString = reblog.content.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
         cell.tootContent.attributedText = attributedString
         cell.userID.text = "@" + reblog.account.username
         cell.userName.text = reblog.account.displayName

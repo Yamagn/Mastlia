@@ -50,7 +50,7 @@ class UserViewController: UIViewController {
                         self.screenName.text = "@" + account.username
                         self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
                         self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
-                        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
+                        let attributedString = account.note.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
                         self.note.attributedText = attributedString
                     }
                 }
@@ -72,7 +72,7 @@ class UserViewController: UIViewController {
                         self.screenName.text = "@" + account.username
                         self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
                         self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
-                        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<font size=5>" + account.note)
+                        let attributedString = account.note.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
                         self.note.attributedText = attributedString
                     }
                 }

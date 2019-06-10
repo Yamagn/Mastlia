@@ -29,7 +29,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         
         cell.fromUserAvatar.setImage(fromUrl: data.account.avatar)
         if let status = data.status {
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + status.content + "</b>")
+            let attributedString = status.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
             cell.tootContent.attributedText = attributedString
         }
         cell.judge(type: data.type, UserName: data.account.username)

@@ -123,8 +123,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.retCount.text = String(data.reblogsCount)
             cell.repCount.text = String(data.mentions.count)
             cell.favCount.text = String(data.favouritesCount)
-            //        cell.tootContent.text = data.content
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + data.content + "</b>")
+            let attributedString = data.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
             cell.tootContent.attributedText = attributedString
             cell.userID.text = "@" + data.account.username
             cell.userName.text = data.account.displayName
@@ -145,8 +144,7 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.retCount.text = String(reblog.reblogsCount)
         cell.repCount.text = String(reblog.mentions.count)
         cell.favCount.text = String(reblog.favouritesCount)
-        //        cell.tootContent.text = data.content
-        let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + reblog.content + "</b>")
+        let attributedString = reblog.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
         cell.tootContent.attributedText = attributedString
         cell.userID.text = "@" + reblog.account.username
         cell.userName.text = reblog.account.displayName
@@ -204,23 +202,35 @@ extension UIImageView {
     }
 }
 
-extension NSAttributedString {
-    static func parseHTML2Text(sourceText text: String) -> NSAttributedString? {
-        let encodeData = text.data(using: String.Encoding.utf8, allowLossyConversion: true)
-        let attributedOptions = [
-            NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html as AnyObject,
-            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue as AnyObject
-        ]
-        
-        var attributedString: NSAttributedString?
-        if let encodeData = encodeData {
-            do {
-                attributedString = try NSAttributedString(data: encodeData, options: attributedOptions, documentAttributes: nil)
-            } catch _ {
-                
+extension String {
+    func convertHTML(withFont: UIFont? = nil, align: NSTextAlignment = .left) -> NSAttributedString {
+        if let data = self.data(using: .utf8, allowLossyConversion: true), let attributedText = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) {
+            let style = NSMutableParagraphStyle()
+            style.alignment = align
+            
+            let fullRange = NSRange(location: 0, length: attributedText.length)
+            let mutableAttributeText = NSMutableAttributedString(attributedString: attributedText)
+            
+            if let font = withFont {
+                mutableAttributeText.addAttribute(.paragraphStyle, value: style, range: fullRange)
+                mutableAttributeText.enumerateAttribute(.font, in: fullRange, options: .longestEffectiveRangeNotRequired, using: { attribute, range, _ in
+                    if let attributeFont = attribute as? UIFont {
+                        let traits: UIFontDescriptor.SymbolicTraits = attributeFont.fontDescriptor.symbolicTraits
+                        var newDescriptor = attributeFont.fontDescriptor.withFamily(font.familyName)
+                        if (traits.rawValue & UIFontDescriptor.SymbolicTraits.traitBold.rawValue) != 0 {
+                            newDescriptor = newDescriptor.withSymbolicTraits(.traitBold)!
+                        }
+                        if (traits.rawValue & UIFontDescriptor.SymbolicTraits.traitItalic.rawValue) != 0 {
+                            newDescriptor = newDescriptor.withSymbolicTraits(.traitItalic)!
+                        }
+                        let scaledFont = UIFont(descriptor: newDescriptor, size: attributeFont.pointSize)
+                        mutableAttributeText.addAttribute(.font, value: scaledFont, range: range)
+                    }
+                })
             }
+            return mutableAttributeText
         }
-        return attributedString
+        return NSAttributedString(string: self)
     }
 }
 
