@@ -27,16 +27,35 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = dataList[indexPath.row]
-        let cell: NotificationCell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
-        
-        cell.fromUserAvatar.setImage(fromUrl: data.account.avatar)
-        if let status = data.status {
-            let attributedString = status.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
+        if data.type != NotificationType.mention {
+            let cell: NotificationCell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
+            
+            cell.fromUserAvatar.setImage(fromUrl: data.account.avatar)
+            if let status = data.status {
+                let attributedString = status.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
+                cell.tootContent.attributedText = attributedString
+            }
+            cell.judge(type: data.type, UserName: data.account.username)
+            return cell
+        } else {
+            let status = data.status
+            let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
+            cell.retCount.text = String(data.status!.reblogsCount)
+            cell.repCount.text = String(data.status!.mentions.count)
+            cell.favCount.text = String(data.status!.favouritesCount)
+            let attributedString = data.status!.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
             cell.tootContent.attributedText = attributedString
+            cell.userID.text = "@" + data.account.username
+            cell.userName.text = data.account.displayName
+            print(data.account.avatar)
+            cell.userImage.setImage(fromUrl: data.account.avatar)
+            cell.id = data.status!.id
+            cell.user.domain = self.user.domain
+            cell.user.accessToken = self.user.accessToken
+            cell.isFavorited = data.status!.favourited ?? false
+            cell.isRebloged = data.status!.reblogged ?? false
+            return cell
         }
-        cell.judge(type: data.type, UserName: data.account.username)
-        
-        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
