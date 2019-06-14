@@ -55,7 +55,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         if selectContent != nil {
             if selectContent?.type == NotificationType.follow {
                 performSegue(withIdentifier: "showUserInfo", sender: nil)
-            } else if selectContent?.type == NotificationType.favourite || selectContent?.type == NotificationType.reblog {
+            } else {
                 performSegue(withIdentifier: "showTootDetail", sender: nil)
             }
         }
