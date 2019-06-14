@@ -8,7 +8,7 @@ target 'Mastlia' do
   # Pods for Mastlia
   pod 'MastodonKit', '2.0.0'
   pod 'RealmSwift'
-  pod 'Fuzi'
+  pod 'ActiveLabel'
 
   target 'MastliaTests' do
     inherit! :search_paths

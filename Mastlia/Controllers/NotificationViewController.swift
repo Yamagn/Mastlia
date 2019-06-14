@@ -14,6 +14,9 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     var dataList: [MastodonKit.Notification] = []
     var user: Account = Account()
+    var selectContent: MastodonKit.Notification?
+    private weak var refreshControl: UIRefreshControl!
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -24,16 +27,57 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = dataList[indexPath.row]
-        let cell: NotificationCell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
-        
-        cell.fromUserAvatar.setImage(fromUrl: data.account.avatar)
-        if let status = data.status {
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + status.content + "</b>")
+        if data.type != NotificationType.mention {
+            let cell: NotificationCell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
+            
+            cell.fromUserAvatar.setImage(fromUrl: data.account.avatar)
+            if let status = data.status {
+                let attributedString = status.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
+                cell.tootContent.attributedText = attributedString
+            }
+            cell.judge(type: data.type, UserName: data.account.username)
+            return cell
+        } else {
+            let status = data.status
+            let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
+            cell.retCount.text = String(data.status!.reblogsCount)
+            cell.repCount.text = String(data.status!.mentions.count)
+            cell.favCount.text = String(data.status!.favouritesCount)
+            let attributedString = data.status!.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
             cell.tootContent.attributedText = attributedString
+            cell.userID.text = "@" + data.account.username
+            cell.userName.text = data.account.displayName
+            print(data.account.avatar)
+            cell.userImage.setImage(fromUrl: data.account.avatar)
+            cell.id = data.status!.id
+            cell.user.domain = self.user.domain
+            cell.user.accessToken = self.user.accessToken
+            cell.isFavorited = data.status!.favourited ?? false
+            cell.isRebloged = data.status!.reblogged ?? false
+            return cell
         }
-        cell.judge(type: data.type, UserName: data.account.username)
-        
-        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showUserInfo" {
+            let userInfoController: UserViewController = segue.destination as! UserViewController
+            userInfoController.account = self.selectContent?.account
+        } else if segue.identifier == "showTootDetail" {
+            let tootDetailController: DetailViewController = segue.destination as! DetailViewController
+            tootDetailController.catchToot = self.selectContent?.status
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectContent = dataList[indexPath.row]
+        if selectContent != nil {
+            if selectContent?.type == NotificationType.follow {
+                performSegue(withIdentifier: "showUserInfo", sender: nil)
+            } else {
+                performSegue(withIdentifier: "showTootDetail", sender: nil)
+            }
+        }
     }
     
     func reloadListDatas() {
@@ -54,6 +98,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
                 return
             }
         }
+        stopPullToRefresh()
     }
     
 
@@ -72,8 +117,27 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         let tootNib = UINib(nibName: "TootCell", bundle: nil)
         tableView.register(notifyNib, forCellReuseIdentifier: "NotificationCell")
         tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
-        
+        initializePullToRefresh()
         reloadListDatas()
+    }
+    
+    private func initializePullToRefresh() {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(onPullToRefresh(_:)), for: .valueChanged)
+        tableView.addSubview(control)
+        refreshControl = control
+    }
+    
+    @objc private func onPullToRefresh(_ sender: AnyObject) {
+        reloadListDatas()
+    }
+    
+    private func stopPullToRefresh() {
+        if let controller = refreshControl {
+            if controller.isRefreshing {
+                refreshControl.endRefreshing()
+            }
+        }
     }
 
 }

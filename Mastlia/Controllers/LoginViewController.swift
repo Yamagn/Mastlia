@@ -18,14 +18,16 @@ class LoginViewController: UIViewController {
     var user: Account = Account()
     
     @IBAction func onLoginButtonTapped(_ sender: Any) {
-        if domain.text == nil || mail == nil || pass == nil {
+        if domain.text == nil || mail.text == nil || pass.text == nil {
             let controller = UIAlertController(title: nil, message: "正しく入力してください", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(controller, animated: true, completion: nil)
         }
         
-        
-        let client = Client(baseURL: "https://" + domain.text!)
+        let domainText = domain.text!
+        let mailText = mail.text!
+        let passText = pass.text!
+        let client = Client(baseURL: "https://" + domainText)
         
         let request = Clients.register(clientName: "Mastlia", scopes: [.read, .write, .follow], website: "https://github.com/MastodonKit/MastodonKit")
         client.run(request) { result in
@@ -35,13 +37,13 @@ class LoginViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
                 return
             }
-            let loginRequest = Login.silent(clientID: application.clientID, clientSecret: application.clientSecret, scopes: [.read, .write], username: self.mail.text!, password: self.pass.text!)
+            let loginRequest = Login.silent(clientID: application.clientID, clientSecret: application.clientSecret, scopes: [.read, .write], username: mailText, password: passText)
             client.run(loginRequest) { result in
                 if let loginSettings = result.value {
                     DispatchQueue.main.async {
-                        self.user.domain = self.domain.text!
-                        self.user.mail = self.mail.text!
-                        self.user.pass = self.pass.text!
+                        self.user.domain = domainText
+                        self.user.mail = mailText
+                        self.user.pass = passText
                         self.user.accessToken = loginSettings.accessToken
                         self.save(user: self.user)
                     }
@@ -64,18 +66,5 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

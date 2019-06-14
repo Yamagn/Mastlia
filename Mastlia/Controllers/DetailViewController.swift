@@ -33,8 +33,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         detailTable.tableFooterView = UIView()
     }
 
-    // MARK: - Table view data source
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -67,7 +65,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.userID.text = "@" + toot.account.username
             cell.userName.text = toot.account.displayName
             cell.dateTime.text = formatter.string(from: toot.createdAt)
-            let attributedString = NSAttributedString.parseHTML2Text(sourceText: "<b><font size=5>" + toot.content + "</b>")
+            let attributedString = toot.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
             cell.tootContent.attributedText = attributedString
             return cell
         case 1:

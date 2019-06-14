@@ -17,7 +17,6 @@ class NotificationCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func judge(type type: NotificationType, UserName name: String) {
@@ -40,7 +39,6 @@ class NotificationCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
     
 }
