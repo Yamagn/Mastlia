@@ -43,6 +43,9 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         if segue.identifier == "showUserInfo" {
             let userInfoController: UserViewController = segue.destination as! UserViewController
             userInfoController.account = self.selectContent?.account
+        } else if segue.identifier == "showTootDetail" {
+            let tootDetailController: DetailViewController = segue.destination as! DetailViewController
+            tootDetailController.catchToot = self.selectContent?.status
         }
     }
     
@@ -52,6 +55,8 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         if selectContent != nil {
             if selectContent?.type == NotificationType.follow {
                 performSegue(withIdentifier: "showUserInfo", sender: nil)
+            } else {
+                performSegue(withIdentifier: "showTootDetail", sender: nil)
             }
         }
     }
