@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
                 return
             }
-            let loginRequest = Login.silent(clientID: application.clientID, clientSecret: application.clientSecret, scopes: [.read, .write], username: mailText, password: passText)
+            let loginRequest = Login.silent(clientID: application.clientID, clientSecret: application.clientSecret, scopes: [.read, .write, .follow], username: mailText, password: passText)
             client.run(loginRequest) { result in
                 if let loginSettings = result.value {
                     DispatchQueue.main.async {
