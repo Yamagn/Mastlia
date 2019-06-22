@@ -154,22 +154,21 @@ class UserViewController: UIViewController {
         if followButton.currentTitle == "フォローする" {
             let followReq = Accounts.follow(id: account!.id)
             client.run(followReq) { result in
-                if result.error != nil {
-                    let controller = UIAlertController(title: nil, message: "フォローに失敗しました", preferredStyle: .alert)
-                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(controller, animated: true, completion: nil)
-                    return
+                print(result)
+                DispatchQueue.main.async {
+                    self.followButton.setTitle("フォローを外す", for: .normal)
+                    self.followButton.backgroundColor = UIColor.red
+                    self.followButton.setTitleColor(.white, for: .normal)
                 }
             }
         }
         if followButton.currentTitle == "フォローを外す" {
             let unfollowReq = Accounts.unfollow(id: account!.id)
             client.run(unfollowReq) { result in
-                if result.error != nil {
-                    let controller = UIAlertController(title: nil, message: "操作に失敗しました", preferredStyle: .alert)
-                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(controller, animated: true, completion: nil)
-                    return
+                DispatchQueue.main.async {
+                    self.followButton.setTitle("フォローする", for: .normal)
+                    self.followButton.backgroundColor = UIColor(red: 0, green: 122 / 255, blue: 1, alpha: 1)
+                    self.followButton.setTitleColor(.white, for: .normal)
                 }
             }
         } else {
