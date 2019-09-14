@@ -44,18 +44,6 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "moveToot", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "moveToot" {
-            let tootView: TootViewController = segue.destination as! TootViewController
-            tootView.user = self.user as Account?
-        }
-        
-        if segue.identifier == "showDetail" {
-            let detailView: DetailViewController = segue.destination as! DetailViewController
-            detailView.catchToot = selectContent
-        }
-    }
-    
     @IBAction func changeTL(_ sender: Any) {
         if isHome {
             isHome = false
@@ -165,7 +153,10 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
         selectContent = dataList[indexPath.row]
         if selectContent != nil {
-            performSegue(withIdentifier: "showDetail", sender: nil)
+            let detailStoryBoard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+            let detaiViewController: DetailViewController = detailStoryBoard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+            detaiViewController.catchToot = selectContent
+            self.navigationController?.pushViewController(detaiViewController, animated: true)
         }
     }
     

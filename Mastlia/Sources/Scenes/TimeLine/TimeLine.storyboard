@@ -46,6 +46,7 @@
                                 </state>
                                 <connections>
                                     <action selector="postToot:" destination="rIs-Je-TLD" eventType="touchUpInside" id="pj0-DQ-RcF"/>
+                                    <segue destination="GGw-bj-OrY" kind="presentation" identifier="moveToot" id="qsc-Yc-36d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,11 +77,28 @@
                         <outlet property="changeTLButton" destination="FE9-MV-iKd" id="MIF-0W-xbZ"/>
                         <outlet property="indicator" destination="fT6-sq-flW" id="jn1-fN-CLg"/>
                         <outlet property="tableView" destination="be5-6a-dsH" id="jZD-de-XLb"/>
+                        <segue destination="rD6-BT-vAp" kind="show" identifier="showDetail" id="D41-DO-TmP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fy0-5F-vcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="-53"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="XVt-4L-P5c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="rD6-BT-vAp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EwQ-3N-dUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="-95"/>
+        </scene>
+        <!--Toot-->
+        <scene sceneID="WyT-oj-WMF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Toot" id="GGw-bj-OrY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NlV-Tz-in3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3s2-mm-Anr">

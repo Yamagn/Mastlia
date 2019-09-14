@@ -287,8 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				07172E5022ABD2160062C5BD /* UserListViewController.swift */,
-				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 				07653671232CCA90006EB725 /* UserList.storyboard */,
+				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
