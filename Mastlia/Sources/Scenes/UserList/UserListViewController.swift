@@ -41,11 +41,15 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.pushViewController(userViewController, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let userNib = UINib(nibName: "UserListCell", bundle: nil)
         tableView.register(userNib, forCellReuseIdentifier: "UserListCell")
         tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }

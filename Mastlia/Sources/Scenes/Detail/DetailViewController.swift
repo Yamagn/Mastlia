@@ -17,9 +17,9 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var user: Account = Account()
     var isCount = true
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let mainNib = UINib(nibName: "DetailCell", bundle: nil)
         let countNib = UINib(nibName: "ActivityCountCell", bundle: nil)
         let activityNib = UINib(nibName: "ActivityCell", bundle: nil)
@@ -31,6 +31,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         detailTable.register(tootNib, forCellReuseIdentifier: "TootCell")
         
         detailTable.tableFooterView = UIView()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
