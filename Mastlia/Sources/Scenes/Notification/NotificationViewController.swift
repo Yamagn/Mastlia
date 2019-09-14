@@ -59,7 +59,6 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         selectContent = dataList[indexPath.row]
         if selectContent != nil {
             if selectContent?.type == NotificationType.follow {
@@ -97,9 +96,12 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         stopPullToRefresh()
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
         
         let realm = try! Realm()
         let users = realm.objects(Account.self)
@@ -115,6 +117,10 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
         initializePullToRefresh()
         reloadListDatas()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     private func initializePullToRefresh() {

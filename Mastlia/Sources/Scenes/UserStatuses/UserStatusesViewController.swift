@@ -18,10 +18,11 @@ class UserStatusesViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let realm = try! Realm()
-        user = realm.objects(Account.self).first!        
+        user = realm.objects(Account.self).first!
         guard let account = param else {
             let controller = UIAlertController(title: nil, message: "投稿を取得できませんでした", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -34,8 +35,10 @@ class UserStatusesViewController: UIViewController, UITableViewDelegate, UITable
         let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
         tableView.register(reblogNib, forCellReuseIdentifier: "ReblogCell")
         refreshTL()
-
-
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

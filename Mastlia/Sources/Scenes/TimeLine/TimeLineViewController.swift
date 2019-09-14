@@ -21,12 +21,15 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     var isHome: Bool = true
     var selectContent: Status? = nil
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initializePullToRefresh()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
         
         let realm = try! Realm()
-
+        
         let users = realm.objects(Account.self)
         if users.isEmpty {
             performSegue(withIdentifier: "moveLoginView", sender: nil)
@@ -37,7 +40,12 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.register(tootNib, forCellReuseIdentifier: "TootCell")
         let reblogNib = UINib(nibName: "ReblogCell", bundle: nil)
         tableView.register(reblogNib, forCellReuseIdentifier: "ReblogCell")
+        initializePullToRefresh()
         reloadListDatas()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     @IBAction func postToot(_ sender: Any) {
@@ -150,7 +158,6 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         selectContent = dataList[indexPath.row]
         if selectContent != nil {
             let detailStoryBoard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)

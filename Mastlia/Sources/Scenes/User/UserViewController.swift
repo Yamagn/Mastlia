@@ -24,9 +24,9 @@ class UserViewController: UIViewController {
     var current: MastodonKit.Account?
     
     var userlist: [MastodonKit.Account] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let realm = try! Realm()
         let user = realm.objects(Account.self).first!
         let infoReq = Accounts.currentUser()
@@ -96,6 +96,11 @@ class UserViewController: UIViewController {
             }
         }
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     @IBAction func moveFollowList(_ sender: Any) {
         let realm = try! Realm()
         let user = realm.objects(Account.self).first!
