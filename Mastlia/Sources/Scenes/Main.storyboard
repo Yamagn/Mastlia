@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4AH-c4-nCU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TimeLine-->
+        <scene sceneID="dsn-8r-c4Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TimeLine" id="FIW-px-lOe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="he5-a7-nvQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GFJ-gp-hEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="592"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ThI-fX-uRs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4AH-c4-nCU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xle-S0-lUk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FIW-px-lOe" kind="relationship" relationship="viewControllers" id="xcv-Jb-xqF"/>
+                        <segue destination="qmw-DV-hCE" kind="relationship" relationship="viewControllers" id="1pg-Eg-YaI"/>
+                        <segue destination="qhA-QU-QKh" kind="relationship" relationship="viewControllers" id="dlq-iq-7fr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDk-di-ds0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="683"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="32d-8X-poq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notification" id="qmw-DV-hCE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Xby-Wa-NzV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssj-t0-eTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="693"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="2IB-1c-nKa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" id="qhA-QU-QKh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gUx-Id-c8l"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5K-tN-C7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="806"/>
+        </scene>
+    </scenes>
+</document>
