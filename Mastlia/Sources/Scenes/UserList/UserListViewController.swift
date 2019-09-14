@@ -12,7 +12,7 @@ import MastodonKit
 class UserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var accounts: [MastodonKit.Account] = []
-    var selectAccount: MastodonKit.Account?
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -33,17 +33,12 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showUserDetail" {
-            let userInfoView: UserViewController = segue.destination as! UserViewController
-            userInfoView.account = selectAccount
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectAccount = accounts[indexPath.row]
-        performSegue(withIdentifier: "showUserDetail", sender: nil)
+        let userStoryBoard: UIStoryboard = UIStoryboard(name: "User", bundle: nil)
+        let userViewController: UserViewController = userStoryBoard.instantiateViewController(withIdentifier: "User") as! UserViewController
+        userViewController.account = accounts[indexPath.row]
+        self.navigationController?.pushViewController(userViewController, animated: true)
     }
     
     override func viewDidLoad() {

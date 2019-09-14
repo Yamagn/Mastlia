@@ -95,20 +95,7 @@ class UserViewController: UIViewController {
                 }
             }
         }
-        
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showStatuses" {
-            let userStatusesView: UserStatusesViewController = segue.destination as! UserStatusesViewController
-            userStatusesView.param = self.account
-        } else if segue.identifier == "showUserList" {
-            let userListView: UserListViewController = segue.destination as! UserListViewController
-            userListView.accounts = userlist
-        }
-    }
-    
-    
     @IBAction func moveFollowList(_ sender: Any) {
         let realm = try! Realm()
         let user = realm.objects(Account.self).first!
@@ -120,13 +107,15 @@ class UserViewController: UIViewController {
                 if let list = result.value {
                     self.userlist = list
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "showUserList", sender: nil)
+                        let userListStoryBoard: UIStoryboard = UIStoryboard(name: "UserList", bundle: nil)
+                        let userListViewController: UserListViewController = userListStoryBoard.instantiateViewController(withIdentifier: "UserList") as! UserListViewController
+                        userListViewController.accounts = list
+                        self.navigationController?.pushViewController(userListViewController, animated: true)
                     }
                 }
             }
         }
     }
-    
     @IBAction func moveFollwerList(_ sender: Any) {
         let realm = try! Realm()
         let user = realm.objects(Account.self).first!
@@ -138,7 +127,10 @@ class UserViewController: UIViewController {
                 if let list = result.value {
                     self.userlist = list
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "showUserList", sender: nil)
+                        let userListStoryBoard: UIStoryboard = UIStoryboard(name: "UserList", bundle: nil)
+                        let userListViewController: UserListViewController = userListStoryBoard.instantiateViewController(withIdentifier: "UserList") as! UserListViewController
+                        userListViewController.accounts = list
+                        self.navigationController?.pushViewController(userListViewController, animated: true)
                     }
                 }
             }

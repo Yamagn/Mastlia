@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eon-TI-bx8">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--通知-->
+        <scene sceneID="JER-gH-h7n">
+            <objects>
+                <viewController id="kTW-ke-xIg" customClass="NotificationViewController" customModule="Mastlia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jDW-CZ-Yq5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wul-a1-N2C">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kTW-ke-xIg" id="rUF-ji-iD1"/>
+                                    <outlet property="delegate" destination="kTW-ke-xIg" id="4uB-gd-NT3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wl8-bk-aSQ" firstAttribute="trailing" secondItem="Wul-a1-N2C" secondAttribute="trailing" id="H3Q-PZ-aeP"/>
+                            <constraint firstItem="Wul-a1-N2C" firstAttribute="leading" secondItem="Wl8-bk-aSQ" secondAttribute="leading" id="SLz-VD-tBW"/>
+                            <constraint firstItem="Wl8-bk-aSQ" firstAttribute="bottom" secondItem="Wul-a1-N2C" secondAttribute="bottom" id="qOU-8X-rO3"/>
+                            <constraint firstItem="Wul-a1-N2C" firstAttribute="top" secondItem="Wl8-bk-aSQ" secondAttribute="top" id="vDf-m3-Qnb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wl8-bk-aSQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="notify..png" id="JYg-5t-JeB"/>
+                    <navigationItem key="navigationItem" title="通知" id="bkD-cG-QoP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Wul-a1-N2C" id="Zhk-l3-qad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dE-W1-ems" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="684"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ggl-4V-eZ5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eon-TI-bx8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="notify.png" id="OZK-vJ-5Ty"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UTP-fM-psX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kTW-ke-xIg" kind="relationship" relationship="rootViewController" id="1ji-9U-PYZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaC-5G-ks2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="683"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="notify..png" width="36" height="36"/>
+        <image name="notify.png" width="36" height="36"/>
+    </resources>
+</document>

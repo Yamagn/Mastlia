@@ -58,24 +58,20 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showUserInfo" {
-            let userInfoController: UserViewController = segue.destination as! UserViewController
-            userInfoController.account = self.selectContent?.account
-        } else if segue.identifier == "showTootDetail" {
-            let tootDetailController: DetailViewController = segue.destination as! DetailViewController
-            tootDetailController.catchToot = self.selectContent?.status
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectContent = dataList[indexPath.row]
         if selectContent != nil {
             if selectContent?.type == NotificationType.follow {
-                performSegue(withIdentifier: "showUserInfo", sender: nil)
+                let userStoryBoard: UIStoryboard = UIStoryboard(name: "User", bundle: nil)
+                let userViewController: UserViewController = userStoryBoard.instantiateViewController(withIdentifier: "User") as! UserViewController
+                userViewController.account = selectContent?.account
+                self.navigationController?.pushViewController(userViewController, animated: true)
             } else {
-                performSegue(withIdentifier: "showTootDetail", sender: nil)
+                let detailStroyBoard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+                let detailViewController: DetailViewController = detailStroyBoard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+                detailViewController.catchToot = selectContent?.status
+                self.navigationController?.pushViewController(detailViewController, animated: true)
             }
         }
     }
