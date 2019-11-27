@@ -1,2 +1,3 @@
 github "MastodonKit/MastodonKit" "2.0.0"
-github "realm/realm-cocoa" "v4.0.0"
+github "SVProgressHUD/SVProgressHUD" "2.2.5"
+github "realm/realm-cocoa" "v4.1.1"

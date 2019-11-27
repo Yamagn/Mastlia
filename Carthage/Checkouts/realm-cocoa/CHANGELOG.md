@@ -1,3 +1,50 @@
+4.1.1 Release notes (2019-11-18)
+=============================================================
+
+### Fixed
+
+* The UpdatePolicy passed to `realm.add()` or `realm.create()` was not properly
+  propagated when adding objects within a `List`, which could result in
+  spurious change notifications when using `.modified`.
+  ([#6321](https://github.com/realm/realm-cocoa/issues/6321), since v3.16.0)
+* Fix a rare deadlock when a Realm collection or object was observed, then
+  `refresh()` was explicitly called, and then the NotificationToken from the
+  observation was destroyed on a different thread (since 0.98.0).
+
+### Compatibility
+
+* File format: Generates Realms with format v9 (Reads and upgrades all previous formats)
+* Realm Object Server: 3.21.0 or later.
+* Carthage release for Swift is built with Xcode 11.2.
+
+4.1.0 Release notes (2019-11-13)
+=============================================================
+
+### Enhancements
+
+* Improve performance of queries over a link where the final target property
+  has an index.
+* Restore support for storing `@objc enum` properties on RealmSwift.Object
+  subclasses (broken in 4.0.0), and add support for storing them in
+  RealmOptional properties.
+
+### Fixed
+
+* The sync client would fail to reconnect after failing to integrate a
+  changeset. The bug would lead to further corruption of the client’s Realm
+  file. ([RSYNC-48](https://jira.mongodb.org/browse/RSYNC-48), since v3.2.0).
+
+### Compatibility
+
+* File format: Generates Realms with format v9 (Reads and upgrades all previous formats)
+* Realm Object Server: 3.21.0 or later.
+* Carthage release for Swift is built with Xcode 11.2.
+
+### Internal
+
+* Upgraded realm-core from 5.23.5 to 5.23.6.
+* Upgraded realm-sync from 4.7.11 to 4.8.2
+
 4.0.0 Release notes (2019-11-08)
 =============================================================
 

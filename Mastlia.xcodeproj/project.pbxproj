@@ -11,6 +11,8 @@
 		07172E4F22ABC7530062C5BD /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07172E4D22ABC7530062C5BD /* UserListCell.xib */; };
 		07172E5122ABD2160062C5BD /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07172E5022ABD2160062C5BD /* UserListViewController.swift */; };
 		0735463122AA4B7300EA4D39 /* UserStatusesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735463022AA4B7300EA4D39 /* UserStatusesViewController.swift */; };
+		073C912F238E6EC60079CEB8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C912B238E6CAD0079CEB8 /* SVProgressHUD.framework */; };
+		073C9130238E6EC60079CEB8 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 073C912B238E6CAD0079CEB8 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07653672232CCA90006EB725 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07653671232CCA90006EB725 /* UserList.storyboard */; };
 		07653674232CCAAE006EB725 /* UserStatuses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07653673232CCAAE006EB725 /* UserStatuses.storyboard */; };
 		07653676232CCAB7006EB725 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07653675232CCAB7006EB725 /* User.storyboard */; };
@@ -69,11 +71,26 @@
 		52ED542621B7AE4800D03AC3 /* person_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ED542521B7AE4800D03AC3 /* person_add@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		073C9131238E6EC60079CEB8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				073C9130238E6EC60079CEB8 /* SVProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		07172E4C22ABC7530062C5BD /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		07172E4D22ABC7530062C5BD /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
 		07172E5022ABD2160062C5BD /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		0735463022AA4B7300EA4D39 /* UserStatusesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusesViewController.swift; sourceTree = "<group>"; };
+		073C912B238E6CAD0079CEB8 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		07653671232CCA90006EB725 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 		07653673232CCAAE006EB725 /* UserStatuses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStatuses.storyboard; sourceTree = "<group>"; };
 		07653675232CCAB7006EB725 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
@@ -141,6 +158,7 @@
 			files = (
 				07653685232CE935006EB725 /* RealmSwift.framework in Frameworks */,
 				07653682232CE57D006EB725 /* MastodonKit.framework in Frameworks */,
+				073C912F238E6EC60079CEB8 /* SVProgressHUD.framework in Frameworks */,
 				07653680232CE49D006EB725 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +346,7 @@
 		2C8B2EE37CB5F432E79413AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				073C912B238E6CAD0079CEB8 /* SVProgressHUD.framework */,
 				07653684232CE935006EB725 /* RealmSwift.framework */,
 				07653681232CE57D006EB725 /* MastodonKit.framework */,
 				0765367F232CE49C006EB725 /* Realm.framework */,
@@ -411,6 +430,7 @@
 				5273ECCE21A63B7C006F95FB /* Frameworks */,
 				5273ECCF21A63B7C006F95FB /* Resources */,
 				07653683232CE587006EB725 /* ShellScript */,
+				073C9131238E6EC60079CEB8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

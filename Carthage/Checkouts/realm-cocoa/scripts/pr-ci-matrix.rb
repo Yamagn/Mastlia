@@ -27,9 +27,12 @@ targets = {
 
   'cocoapods-osx' => release_only,
   'cocoapods-ios' => release_only,
+  'cocoapods-ios-dynamic' => release_only,
   'cocoapods-watchos' => release_only,
 
-  'swiftpm' => ->(v, c) { c == 'Release' && (v == '10.3' or v == xcode_versions.last) }
+  'swiftpm' => ->(v, c) { c == 'Release' && (v == '10.3' or v == xcode_versions.last) },
+  'swiftpm-address' => latest_only,
+  'swiftpm-thread' => latest_only,
 
   # These are disabled because the machine with the devices attached is currently offline
   # - ios-device-objc-ios8

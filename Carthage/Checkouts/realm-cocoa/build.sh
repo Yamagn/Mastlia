@@ -836,8 +836,13 @@ case "$COMMAND" in
         exit 0
         ;;
 
-    "test-swiftpm")
-        xcrun swift test --configuration $(echo $CONFIGURATION | tr "[:upper:]" "[:lower:]")
+    test-swiftpm*)
+        SANITIZER=$(echo $COMMAND | cut -d - -f 3)
+        if [ -n "$SANITIZER" ]; then
+            SANITIZER="--sanitize $SANITIZER"
+            export ASAN_OPTIONS='check_initialization_order=true:detect_stack_use_after_return=true'
+        fi
+        xcrun swift test --configuration $(echo $CONFIGURATION | tr "[:upper:]" "[:lower:]") $SANITIZER
         exit 0
         ;;
 
@@ -884,6 +889,7 @@ case "$COMMAND" in
         fi
 
         sh build.sh verify-cocoapods-ios
+        sh build.sh verify-cocoapods-ios-dynamic
         sh build.sh verify-cocoapods-osx
         sh build.sh verify-cocoapods-watchos
 
@@ -899,6 +905,14 @@ case "$COMMAND" in
         sh build.sh test-watchos-swift-cocoapods
         ;;
 
+    verify-cocoapods-ios-dynamic)
+        PLATFORM=$(echo $COMMAND | cut -d - -f 3)
+        # https://github.com/CocoaPods/CocoaPods/issues/7708
+        export EXPANDED_CODE_SIGN_IDENTITY=''
+        cd examples/installation
+        sh build.sh test-ios-objc-cocoapods-dynamic
+        ;;
+
     verify-cocoapods-*)
         PLATFORM=$(echo $COMMAND | cut -d - -f 3)
         # https://github.com/CocoaPods/CocoaPods/issues/7708
@@ -906,9 +920,6 @@ case "$COMMAND" in
         cd examples/installation
         sh build.sh test-$PLATFORM-objc-cocoapods
         sh build.sh test-$PLATFORM-swift-cocoapods
-        if [[ $PLATFORM = "ios" ]]; then
-            sh build.sh test-ios-objc-cocoapods-dynamic
-        fi
         ;;
 
     "verify-osx-encryption")
@@ -996,8 +1007,8 @@ case "$COMMAND" in
         exit 0
         ;;
 
-    "verify-swiftpm")
-        sh build.sh test-swiftpm
+    verify-swiftpm*)
+        sh build.sh test-$(echo $COMMAND | cut -d - -f 2-)
         exit 0
         ;;
 
