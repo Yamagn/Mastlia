@@ -56,8 +56,6 @@
 		5273ECD721A63B7C006F95FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECD621A63B7C006F95FB /* ViewController.swift */; };
 		5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECDB21A63B7E006F95FB /* Assets.xcassets */; };
 		5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */; };
-		5273ECEA21A63B7E006F95FB /* MastliaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECE921A63B7E006F95FB /* MastliaTests.swift */; };
-		5273ECF521A63B7E006F95FB /* MastliaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273ECF421A63B7E006F95FB /* MastliaUITests.swift */; };
 		5279783A21B77AF300B95775 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279783921B77AF300B95775 /* NotificationViewController.swift */; };
 		5279783F21B77C3D00B95775 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279783D21B77C3D00B95775 /* NotificationCell.swift */; };
 		5279784021B77C3D00B95775 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5279783E21B77C3D00B95775 /* NotificationCell.xib */; };
@@ -70,23 +68,6 @@
 		52ED542421B7AE0B00D03AC3 /* person_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ED542321B7AE0B00D03AC3 /* person_add.png */; };
 		52ED542621B7AE4800D03AC3 /* person_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52ED542521B7AE4800D03AC3 /* person_add@2x.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5273ECE621A63B7E006F95FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5273ECC921A63B7B006F95FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5273ECD021A63B7C006F95FB;
-			remoteInfo = Mastlia;
-		};
-		5273ECF121A63B7E006F95FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5273ECC921A63B7B006F95FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5273ECD021A63B7C006F95FB;
-			remoteInfo = Mastlia;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07172E4C22ABC7530062C5BD /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
@@ -140,12 +121,6 @@
 		5273ECDB21A63B7E006F95FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5273ECDE21A63B7E006F95FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5273ECE021A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5273ECE521A63B7E006F95FB /* MastliaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MastliaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5273ECE921A63B7E006F95FB /* MastliaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastliaTests.swift; sourceTree = "<group>"; };
-		5273ECEB21A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5273ECF021A63B7E006F95FB /* MastliaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MastliaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5273ECF421A63B7E006F95FB /* MastliaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastliaUITests.swift; sourceTree = "<group>"; };
-		5273ECF621A63B7E006F95FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5279783921B77AF300B95775 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		5279783D21B77C3D00B95775 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		5279783E21B77C3D00B95775 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
@@ -167,20 +142,6 @@
 				07653685232CE935006EB725 /* RealmSwift.framework in Frameworks */,
 				07653682232CE57D006EB725 /* MastodonKit.framework in Frameworks */,
 				07653680232CE49D006EB725 /* Realm.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5273ECE221A63B7E006F95FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5273ECED21A63B7E006F95FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,8 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				5273ECD321A63B7C006F95FB /* Mastlia */,
-				5273ECE821A63B7E006F95FB /* MastliaTests */,
-				5273ECF321A63B7E006F95FB /* MastliaUITests */,
 				5273ECD221A63B7C006F95FB /* Products */,
 				2C8B2EE37CB5F432E79413AE /* Frameworks */,
 			);
@@ -425,8 +384,6 @@
 			isa = PBXGroup;
 			children = (
 				5273ECD121A63B7C006F95FB /* Mastlia.app */,
-				5273ECE521A63B7E006F95FB /* MastliaTests.xctest */,
-				5273ECF021A63B7E006F95FB /* MastliaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -441,24 +398,6 @@
 				5273ECE021A63B7E006F95FB /* Info.plist */,
 			);
 			path = Mastlia;
-			sourceTree = "<group>";
-		};
-		5273ECE821A63B7E006F95FB /* MastliaTests */ = {
-			isa = PBXGroup;
-			children = (
-				5273ECE921A63B7E006F95FB /* MastliaTests.swift */,
-				5273ECEB21A63B7E006F95FB /* Info.plist */,
-			);
-			path = MastliaTests;
-			sourceTree = "<group>";
-		};
-		5273ECF321A63B7E006F95FB /* MastliaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5273ECF421A63B7E006F95FB /* MastliaUITests.swift */,
-				5273ECF621A63B7E006F95FB /* Info.plist */,
-			);
-			path = MastliaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,44 +421,6 @@
 			productReference = 5273ECD121A63B7C006F95FB /* Mastlia.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5273ECE421A63B7E006F95FB /* MastliaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5273ECFC21A63B7E006F95FB /* Build configuration list for PBXNativeTarget "MastliaTests" */;
-			buildPhases = (
-				75D47380D3959524F1566870 /* [CP] Check Pods Manifest.lock */,
-				5273ECE121A63B7E006F95FB /* Sources */,
-				5273ECE221A63B7E006F95FB /* Frameworks */,
-				5273ECE321A63B7E006F95FB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5273ECE721A63B7E006F95FB /* PBXTargetDependency */,
-			);
-			name = MastliaTests;
-			productName = MastliaTests;
-			productReference = 5273ECE521A63B7E006F95FB /* MastliaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5273ECEF21A63B7E006F95FB /* MastliaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5273ECFF21A63B7E006F95FB /* Build configuration list for PBXNativeTarget "MastliaUITests" */;
-			buildPhases = (
-				8205192A4F1270DA3FB6E2DB /* [CP] Check Pods Manifest.lock */,
-				5273ECEC21A63B7E006F95FB /* Sources */,
-				5273ECED21A63B7E006F95FB /* Frameworks */,
-				5273ECEE21A63B7E006F95FB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5273ECF221A63B7E006F95FB /* PBXTargetDependency */,
-			);
-			name = MastliaUITests;
-			productName = MastliaUITests;
-			productReference = 5273ECF021A63B7E006F95FB /* MastliaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -532,14 +433,6 @@
 				TargetAttributes = {
 					5273ECD021A63B7C006F95FB = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					5273ECE421A63B7E006F95FB = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 5273ECD021A63B7C006F95FB;
-					};
-					5273ECEF21A63B7E006F95FB = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 5273ECD021A63B7C006F95FB;
 					};
 				};
 			};
@@ -557,8 +450,6 @@
 			projectRoot = "";
 			targets = (
 				5273ECD021A63B7C006F95FB /* Mastlia */,
-				5273ECE421A63B7E006F95FB /* MastliaTests */,
-				5273ECEF21A63B7E006F95FB /* MastliaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -609,20 +500,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5273ECE321A63B7E006F95FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5273ECEE21A63B7E006F95FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -645,50 +522,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		75D47380D3959524F1566870 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MastliaTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8205192A4F1270DA3FB6E2DB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MastliaUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -719,36 +552,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5273ECE121A63B7E006F95FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5273ECEA21A63B7E006F95FB /* MastliaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5273ECEC21A63B7E006F95FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5273ECF521A63B7E006F95FB /* MastliaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5273ECE721A63B7E006F95FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5273ECD021A63B7C006F95FB /* Mastlia */;
-			targetProxy = 5273ECE621A63B7E006F95FB /* PBXContainerItemProxy */;
-		};
-		5273ECF221A63B7E006F95FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5273ECD021A63B7C006F95FB /* Mastlia */;
-			targetProxy = 5273ECF121A63B7E006F95FB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */ = {
@@ -882,8 +686,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23YQJ49WW;
+				DEVELOPMENT_TEAM = 7F6B255837;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -895,7 +700,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymgn.Mastlia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -905,7 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23YQJ49WW;
+				DEVELOPMENT_TEAM = 7F6B255837;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -917,90 +723,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ymgn.Mastlia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		5273ECFD21A63B7E006F95FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23YQJ49WW;
-				INFOPLIST_FILE = MastliaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ymgn.MastliaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastlia.app/Mastlia";
-			};
-			name = Debug;
-		};
-		5273ECFE21A63B7E006F95FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23YQJ49WW;
-				INFOPLIST_FILE = MastliaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ymgn.MastliaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mastlia.app/Mastlia";
-			};
-			name = Release;
-		};
-		5273ED0021A63B7E006F95FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23YQJ49WW;
-				INFOPLIST_FILE = MastliaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ymgn.MastliaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Mastlia;
-			};
-			name = Debug;
-		};
-		5273ED0121A63B7E006F95FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23YQJ49WW;
-				INFOPLIST_FILE = MastliaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ymgn.MastliaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Mastlia;
 			};
 			name = Release;
 		};
@@ -1021,24 +745,6 @@
 			buildConfigurations = (
 				5273ECFA21A63B7E006F95FB /* Debug */,
 				5273ECFB21A63B7E006F95FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5273ECFC21A63B7E006F95FB /* Build configuration list for PBXNativeTarget "MastliaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5273ECFD21A63B7E006F95FB /* Debug */,
-				5273ECFE21A63B7E006F95FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5273ECFF21A63B7E006F95FB /* Build configuration list for PBXNativeTarget "MastliaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5273ED0021A63B7E006F95FB /* Debug */,
-				5273ED0121A63B7E006F95FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
