@@ -33,7 +33,8 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
             cell.fromUserAvatar.setImage(fromUrl: data.account.avatar)
             if let status = data.status {
                 let attributedString = status.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
-                cell.tootContent.attributedText = attributedString
+//                cell.tootContent.attributedText = attributedString
+                cell.tootContent.text = attributedString.string
             }
             cell.judge(type: data.type, UserName: data.account.username)
             return cell
@@ -44,7 +45,8 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
             cell.repCount.text = String(data.status!.mentions.count)
             cell.favCount.text = String(data.status!.favouritesCount)
             let attributedString = data.status!.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
-            cell.tootContent.attributedText = attributedString
+//            cell.tootContent.attributedText = attributedString
+            cell.tootContent.text = attributedString.string
             cell.userID.text = "@" + data.account.username
             cell.userName.text = data.account.displayName
             print(data.account.avatar)

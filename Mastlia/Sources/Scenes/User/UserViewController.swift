@@ -51,7 +51,8 @@ class UserViewController: UIViewController {
                         self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
                         self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
                         let attributedString = account.note.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
-                        self.note.attributedText = attributedString
+//                        self.note.attributedText = attributedString
+                        self.note.text = attributedString.string
                     }
                 }
             }
@@ -73,7 +74,8 @@ class UserViewController: UIViewController {
                         self.followCount.setTitle("\(account.followingCount)フォロー", for: .normal)
                         self.followersCount.setTitle("\(account.followersCount)フォロワー", for: .normal)
                         let attributedString = account.note.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
-                        self.note.attributedText = attributedString
+//                        self.note.attributedText = attributedString
+                        self.note.text = attributedString.string
                     }
                 }
             }

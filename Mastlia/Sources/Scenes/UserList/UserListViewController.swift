@@ -29,7 +29,8 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.screenName.text = account.displayName
         cell.userName.text = "@" + account.username
         let attributedString = account.note.convertHTML(withFont: UIFont.systemFont(ofSize: 20.0), align: .left)
-        cell.note.attributedText = attributedString
+//        cell.note.attributedText = attributedString
+        cell.note.text = attributedString.string
         return cell
     }
     

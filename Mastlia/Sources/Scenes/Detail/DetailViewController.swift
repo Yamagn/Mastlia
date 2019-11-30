@@ -70,7 +70,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.userName.text = toot.account.displayName
             cell.dateTime.text = formatter.string(from: toot.createdAt)
             let attributedString = toot.content.convertHTML(withFont: UIFont.systemFont(ofSize: 30.0), align: .left)
-            cell.tootContent.attributedText = attributedString
+//            cell.tootContent.attributedText = attributedString
+            cell.tootContent.text = attributedString.string
             return cell
         case 1:
             let cell: ActivityCountCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCountCell") as! ActivityCountCell
